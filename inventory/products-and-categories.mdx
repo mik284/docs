@@ -1,0 +1,150 @@
+---
+title: "Add and Manage Products and Menu Categories"
+sidebarTitle: "Products & Categories"
+description: "Build your product catalog or restaurant menu in BasePoint POS by creating categories and adding products with prices, barcodes, and stock settings."
+---
+
+Your product catalog in BasePoint POS is the foundation of everything sold at your business. Categories act as the organising structure — grouping related items together and powering the sidebar navigation in your POS screen — while products are the individual items your staff ring up during a sale. Setting up a clean, well-structured catalog makes serving customers faster and reporting more meaningful.
+
+---
+
+## Creating Categories
+
+Categories appear as tiles in the POS menu sidebar, so creating them first makes it easier to assign products as you add them. BasePoint POS supports a two-level hierarchy: **Main Categories** and **Sub-categories**.
+
+<Steps>
+  <Step title="Open Category Settings">
+    Navigate to **Settings** in the left sidebar, then select **Category Settings**.
+  </Step>
+  <Step title="Add a new category">
+    Click **Add Category** to open the category creation form.
+  </Step>
+  <Step title="Fill in the category details">
+    Enter a **Category Name**, choose an **icon** from the icon picker, and assign a **colour** to help staff identify the category at a glance on the POS screen.
+  </Step>
+  <Step title="Add sub-categories (optional)">
+    After saving the main category, select it from the list and click **Add Sub-category**. Give the sub-category a name and save. Repeat for as many sub-categories as you need.
+  </Step>
+  <Step title="Save the category">
+    Click **Save**. The new category becomes available immediately when assigning products and appears in the POS menu sidebar.
+  </Step>
+</Steps>
+
+<Note>
+  Only **Main Categories** appear as top-level tiles in the POS menu sidebar. Sub-categories are accessible by tapping the main category tile, making it easy to keep the POS screen uncluttered even with a large menu.
+</Note>
+
+---
+
+## Adding Products
+
+With your categories in place, you can start building your product list. Each product you create is immediately available for sale in the POS and can optionally be tracked in inventory.
+
+<Steps>
+  <Step title="Go to the Store">
+    Click **Store** in the left navigation menu to open your product catalog.
+  </Step>
+  <Step title="Open the Add Product form">
+    Click **Add Product** in the top-right corner of the Store page.
+  </Step>
+  <Step title="Fill in the product details">
+    Complete the product fields (see the full field reference below). At minimum, enter a **Name**, **Selling Price**, and **Category**.
+  </Step>
+  <Step title="Upload a product image (optional)">
+    Click the image upload area and select a photo from your device. A clear product image helps staff quickly confirm items during a sale.
+  </Step>
+  <Step title="Enable inventory tracking (optional)">
+    Toggle **Track Inventory** on if you want BasePoint POS to deduct stock each time this product is sold. You can also set an initial **Stock Quantity** and a **Reorder Level** at this step.
+  </Step>
+  <Step title="Save the product">
+    Click **Save**. The product appears in the Store and is immediately available in the POS under the assigned category.
+  </Step>
+</Steps>
+
+### Product field reference
+
+<CardGroup cols={2}>
+  <Card title="Name" icon="tag">
+    The display name shown on the POS screen and receipts. Keep it short and descriptive.
+  </Card>
+  <Card title="Selling Price" icon="circle-dollar-sign">
+    The price charged to the customer. Supports decimal values to two places.
+  </Card>
+  <Card title="Cost Price" icon="coins">
+    The amount you pay to acquire or produce the item. Used for profit margin reporting.
+  </Card>
+  <Card title="Category" icon="folder">
+    The main category this product belongs to. Determines where it appears in the POS sidebar.
+  </Card>
+  <Card title="Sub-category" icon="folder-open">
+    An optional second-level grouping within the main category.
+  </Card>
+  <Card title="Unit of Measure (UOM)" icon="ruler">
+    How the product is measured or sold — for example, *Each*, *Kg*, *Litre*, or *Box*.
+  </Card>
+  <Card title="Barcode / SKU" icon="barcode">
+    Scan or type an existing barcode, or leave blank to have BasePoint POS generate one automatically.
+  </Card>
+  <Card title="Stock Quantity" icon="warehouse">
+    The current on-hand quantity. Only active when **Track Inventory** is enabled.
+  </Card>
+  <Card title="Reorder Level" icon="bell">
+    The minimum stock threshold that triggers a low-stock alert. Only active when **Track Inventory** is enabled.
+  </Card>
+  <Card title="Description" icon="align-left">
+    An optional internal description or notes visible to staff on the product detail screen.
+  </Card>
+  <Card title="Image" icon="image">
+    A photo or illustration of the product. Displayed on the POS tile and product detail page.
+  </Card>
+</CardGroup>
+
+---
+
+## Bulk Import
+
+If you have an existing product list in a spreadsheet, you can import all your products at once instead of adding them one by one.
+
+<Steps>
+  <Step title="Download the import template">
+    Go to **Store**, click the **Import** button, and download the CSV template. The template includes all supported columns with example values.
+  </Step>
+  <Step title="Fill in the template">
+    Open the CSV file in a spreadsheet application and populate each row with your product data. Match each column heading exactly — do not rename or reorder columns.
+  </Step>
+  <Step title="Upload the completed file">
+    Return to **Store > Import**, click **Choose File**, select your completed CSV, and click **Upload**. BasePoint POS validates the file and shows a preview before importing.
+  </Step>
+  <Step title="Confirm the import">
+    Review the preview for any errors flagged in red, correct them in the CSV if needed, and click **Confirm Import** to finalise.
+  </Step>
+</Steps>
+
+<Tip>
+  Use the **Export** button on the Store page to download your existing products as a CSV. This is a quick way to bulk-edit prices or descriptions — update the exported file, then re-import it.
+</Tip>
+
+---
+
+## Barcode Generation
+
+BasePoint POS can automatically generate a barcode for any product that does not have one. This is useful when you stock items from suppliers who do not label their products with a standard barcode.
+
+To generate a barcode for a product:
+
+1. Open the product from **Store** by clicking its name.
+2. On the product detail page, click **Generate Barcode**.
+3. BasePoint POS creates a unique barcode and attaches it to the product.
+4. Print the barcode label directly from the detail page to apply to your stock.
+
+You can also scan any existing barcode at the POS to look up and add a product to a sale instantly — no need to search by name.
+
+---
+
+<Tip>
+  Use a consistent naming convention across your entire catalog — for example, *"Category – Variant – Size"* (e.g., *"Beverage – Coke – 500ml"*). Consistent names make the search bar in the POS much faster to use during a busy service.
+</Tip>
+
+<Note>
+  **Modifiers and add-ons** can be attached to any product to let staff capture customer customisations at the point of sale — for example, *Extra Cheese*, *No Onions*, or *Large Size*. Configure modifiers under **Settings > Category Settings > Modifiers**. Once created, link them to individual products on the product detail page.
+</Note>

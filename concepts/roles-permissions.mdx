@@ -1,0 +1,170 @@
+---
+title: "User Roles and Permissions in BasePoint POS"
+sidebarTitle: "Roles & Permissions"
+description: "Control what each staff member can see and do in BasePoint POS using built-in roles or custom roles with granular permission assignments."
+---
+
+BasePoint POS uses a role-based access control (RBAC) system to ensure every staff member sees only what they need to do their job. Each user is assigned a role, and each role carries a set of granular permissions that map to specific actions — such as viewing orders, voiding a cart, or approving a bank reconciliation. Permissions are grouped by module scope (POS, Accounting, CRM, HR, Real Estate), so you can build roles that precisely match your team structure without giving anyone more access than necessary.
+
+## Built-in Roles
+
+BasePoint POS ships with four built-in roles that cover the most common hospitality and retail staffing patterns. These roles are pre-configured with sensible permission defaults so you can onboard staff immediately.
+
+| Role | Typical Use | Default Access |
+|---|---|---|
+| **Admin** | Account owner, IT manager, or head office operator | Full access to all modules, settings, shops, staff, billing, and system configuration across every location |
+| **Supervisor** | Floor manager, shift lead, or branch manager | Manages orders, views reports, oversees inventory and purchase orders; cannot change system settings, payment methods, or user permissions |
+| **Waiter** | Front-of-house service staff | Takes orders, browses the menu and product catalogue, manages assigned tables, sends items to the kitchen |
+| **Cashier** | Till operator or front-desk staff | Processes payments, manages the active cart, views invoices, looks up customer records and gift cards, views order dashboard |
+
+<Warning>
+  The **Admin** role is restricted and cannot be deleted, renamed, or have its permissions modified. It always retains full access to ensure at least one account owner can manage every aspect of the platform. Any attempt to edit or delete the Admin role is blocked in the UI.
+</Warning>
+
+## Custom Roles
+
+When your staffing structure goes beyond the built-in roles — for example, you need a dedicated **Inventory Clerk**, a read-only **Analyst**, or an **Accountant** who can access Pesa but not Duka — you can create custom roles with exactly the permissions you need.
+
+Custom roles are created and managed under **Settings → Staff & Users → Roles**. The Roles tab displays all existing roles alongside a live permission count and a breakdown of which module scopes each role touches (POS, HR, Accounting, CRM, Dala).
+
+<Steps>
+  <Step title="Navigate to the Roles settings page">
+    Go to **Settings → Staff & Users**, then click the **Roles** tab. You'll see all existing roles listed with their permission counts and module scope badges.
+  </Step>
+  <Step title="Click Add Role">
+    Click the **Add Role** button in the top-right toolbar. The role creation modal opens.
+  </Step>
+  <Step title="Enter a role name">
+    Type a descriptive name for the new role — for example, `Inventory Clerk`, `Accountant`, or `CRM Agent`. Role names appear throughout the platform wherever staff assignments are displayed.
+  </Step>
+  <Step title="Toggle permissions on or off by module">
+    Browse permissions grouped by module. Toggle individual permissions on or off:
+
+    - **Cart** — view, create, update, void, send to kitchen, print/reprint invoices, transfer items
+    - **Orders** — view, update, delete, view dashboard and sales charts
+    - **Products** — view, create, update, delete
+    - **Inventory** — view, add, edit, delete, import, view low-stock alerts
+    - **Reports** — item sales, purchase summary, VAT summary, category sales, and more
+    - **Accounting** — chart of accounts, journal entries, invoices, bank statements, reconciliation, financial reports
+    - **CRM** — leads, activities, campaigns, targets, budgets, workflows
+    - **HR** — leave management, attendance, shifts, schedules
+    - **Real Estate** — properties, leases, rent collection, sales, maintenance
+
+    Each permission displays its action type — **READ**, **CREATE**, **UPDATE**, **DELETE**, or **ACTION** (special operations) — so you can quickly distinguish view-only access from write access.
+  </Step>
+  <Step title="Save the role">
+    Click **Save**. The new role appears immediately in the Roles list and becomes available for assignment when you add or edit staff members.
+  </Step>
+</Steps>
+
+<Tip>
+  Follow the **least-privilege principle**: assign each role only the permissions required for that job function. For example, a Cashier does not need `INVENTORY_CREATE` or `PRODUCTS_DELETE` — grant view-level access only. Restricting permissions reduces the risk of accidental data changes and makes audit trails easier to interpret.
+</Tip>
+
+## Permission Categories
+
+Permissions in BasePoint POS are organized into module scopes. The table below lists the feature groups within each scope and representative actions available.
+
+### POS Scope
+
+| Feature Group | Key Actions |
+|---|---|
+| **Cart** | View items, create/update cart, add/update/delete items, send to kitchen, void, transfer items, print and reprint invoices |
+| **Orders** | View orders and dashboard, update/delete orders and items, view sales charts and best sellers |
+| **Products** | View, create, update, delete products |
+| **Categories** | View, create, update, delete main categories, sub-categories, and categories |
+| **Tables** | View tables, create auto-slots, transfer cart items between tables, manage table locations |
+| **Inventory** | View, add, edit, delete items; import from Excel; view low-stock alerts; view usage by date range |
+| **Suppliers** | View, create, update, delete suppliers |
+| **Purchase Orders** | View, create, update, delete POs; update status; create deliveries; view pending items |
+| **Delivery** | View, create, update deliveries; view by date range; print delivery notes |
+| **Transfers** | View, create, approve, complete, reject, cancel stock transfers between locations |
+| **Reports** | Item sales, purchase summary, VAT summary, category sales, customer sales, shift reports |
+| **Payment Methods** | View, create, update, delete payment methods and payment details |
+| **Gift Cards** | View, create, update gift cards; look up by code; send via email |
+| **Recipes** | View, create, update, delete recipes (for kitchen cost management) |
+| **Modifiers & Addons** | View, create, update, delete modifiers and addons |
+
+### Accounting Scope (Pesa)
+
+| Feature Group | Key Actions |
+|---|---|
+| **Chart of Accounts** | View, create, update accounts; view by type; update opening balances |
+| **Journal Entries** | View, create manual/expense journals; post entries; view by source |
+| **Invoices & Bills** | View, create, update invoices; record payments; convert quotes |
+| **Credit & Debit Notes** | View, create, update, approve notes |
+| **Bank Statements** | Import, categorize, exclude, and reconcile bank statement lines |
+| **Reconciliation** | Open, import lines, match/unmatch, auto-match, complete reconciliation sessions |
+| **Financial Reports** | Trial balance, profit & loss, balance sheet, general ledger, cash flow, VAT, AR/AP ageing, customer and supplier statements |
+
+### CRM Scope (Mteja)
+
+| Feature Group | Key Actions |
+|---|---|
+| **Leads** | View, create, update leads; update stage; convert leads; view pipeline |
+| **Lead Activities** | View, create, update activities; view activity summaries |
+| **Lead Workflows** | View, create, update, delete workflow rules |
+| **Campaigns** | View, create, update, delete campaigns |
+| **Sales Targets** | View, create, update targets; update actuals; view leaderboard |
+| **Sales Budgets** | View, create, update budgets; approve budgets; update actuals |
+
+### HR Scope (Bandu)
+
+| Feature Group | Key Actions |
+|---|---|
+| **Leave Management** | Apply for leave, view leave list and details, cancel leave, approve/reject leave, view leave balances, seed leave balances |
+| **Attendance** | Clock in/out, view attendance status, view personal records, view all records, reconcile attendance |
+| **Shifts** | View, create, update shift definitions |
+| **Schedules** | View, create, update staff schedules |
+
+### Real Estate Scope (Dala)
+
+| Feature Group | Key Actions |
+|---|---|
+| **Properties** | View, create, update, delete property records |
+| **Property Types** | View, create, update, delete property type definitions |
+| **Sales** | View, create, update, delete property sales |
+| **Leases** | View, create, update, delete lease agreements |
+| **Rent Collection** | View, record, and manage rent collections |
+| **Commissions** | View, create, update, delete commission records |
+| **Maintenance** | View, create, update, delete maintenance requests |
+| **Reports** | View Dala-specific financial and portfolio reports |
+
+## Role Presets Reference
+
+In addition to the four built-in roles, BasePoint POS ships with a set of ready-made role presets that you can use as a starting point when creating custom roles. These presets reflect common staffing patterns:
+
+<Tabs>
+  <Tab title="POS Operations">
+    | Preset | Purpose |
+    |---|---|
+    | **Manager** | Full access minus subscription management and system seeding — suitable for a senior branch manager |
+    | **Cashier** | Front-of-house POS operations: cart, orders, payments, customers, tables |
+    | **Kitchen Staff** | Order and cart visibility only — for kitchen display screens |
+    | **Inventory Clerk** | Stock management, deliveries, purchase orders, and supplier access |
+    | **Analyst** | Read-only access to POS reports, order data, and CRM dashboards |
+  </Tab>
+  <Tab title="Accounting">
+    | Preset | Purpose |
+    |---|---|
+    | **Accountant** | Full Pesa module access including reconciliation, journal posting, and financial reports |
+    | **Accounting Viewer** | Read-only access to all Pesa screens — suitable for auditors or directors |
+  </Tab>
+  <Tab title="CRM">
+    | Preset | Purpose |
+    |---|---|
+    | **CRM Manager** | Full Mteja access including budget approval and workflow management |
+    | **CRM Agent** | Sales rep view: create/update leads and activities; read-only campaigns and budgets |
+    | **CRM Viewer** | Read-only CRM access for auditors or board members |
+  </Tab>
+  <Tab title="HR">
+    | Preset | Purpose |
+    |---|---|
+    | **HR Manager** | Full Bandu module access including leave approvals, attendance reconciliation, and HR emails |
+    | **HR Staff** | Self-service: apply for leave, clock in/out, view personal attendance |
+  </Tab>
+</Tabs>
+
+<Info>
+  Role presets are a reference for the permissions system — they don't appear as selectable templates in the UI. When you create a custom role, you configure permissions directly in the permissions toggle panel. Use the presets table above to understand which permissions to enable for a given job function.
+</Info>

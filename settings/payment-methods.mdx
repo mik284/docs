@@ -1,0 +1,86 @@
+---
+title: "Configure Payment Methods for Your POS"
+sidebarTitle: "Payment Methods"
+description: "Add, edit, and disable payment methods in BasePoint POS — including cash, credit card, M-Pesa, and custom methods — to match your business operations."
+---
+
+Payment methods control which options your cashiers see at the checkout screen when completing a sale. Keeping this list accurate — adding the methods you actually accept and disabling those you don't — speeds up the checkout process and ensures your sales reports correctly reflect how revenue was collected.
+
+<Note>
+  Payment method names appear on customer receipts and in sales reports exactly as you enter them. Use clear, customer-friendly names such as "M-Pesa" or "Visa Card" rather than internal codes.
+</Note>
+
+## Default Payment Methods
+
+BasePoint POS comes pre-installed with the following payment methods that work out of the box:
+
+<CardGroup cols={2}>
+  <Card title="Cash" icon="banknotes">
+    Standard cash payment. No additional configuration needed.
+  </Card>
+  <Card title="Credit Card" icon="credit-card">
+    Card payments processed via your card terminal or payment gateway.
+  </Card>
+  <Card title="Debit Card" icon="credit-card">
+    Debit card payments, tracked separately from credit card transactions.
+  </Card>
+  <Card title="Mobile Money" icon="smartphone">
+    Generic mobile money bucket. Configure your specific provider details in System Setup.
+  </Card>
+</CardGroup>
+
+## Adding a Custom Payment Method
+
+Add any payment channel your business accepts that isn't covered by the defaults.
+
+<Steps>
+  <Step title="Open Payment Methods settings">
+    Navigate to **Settings** in the left sidebar, then select **Payment Methods**.
+  </Step>
+  <Step title="Add a new method">
+    Click **Add Payment Method** in the top-right corner.
+  </Step>
+  <Step title="Configure the method">
+    Fill in the following fields:
+
+    - **Name** — what appears on the checkout screen and receipts (e.g. "Airtel Money", "Voucher", "Bank Transfer", "Complimentary")
+    - **Icon Color** — choose a color to visually distinguish this method on the checkout screen
+    - **Enable** — toggle on to make the method available at checkout immediately
+  </Step>
+  <Step title="Save">
+    Click **Save**. The new method appears in the Payment Methods list and is immediately available at the POS checkout.
+  </Step>
+</Steps>
+
+<Tip>
+  Create a **"Complimentary"** payment method for staff meals, management comps, and promotional giveaways. This lets you process those transactions through the POS (so inventory and order counts remain accurate) while clearly separating them from revenue-generating sales in your reports.
+</Tip>
+
+## Mobile Money Setup
+
+For M-Pesa, Airtel Money, or any mobile money provider, configure your business's paybill and till numbers so they print on receipts:
+
+1. Navigate to **Settings > System Setup**.
+2. Open the **Payment Details** tab.
+3. Enter your **Paybill Number** and/or **Till Number**.
+4. Click **Save**.
+
+Once saved, these numbers appear automatically on receipts whenever a mobile money method is selected — customers can verify their payment without asking staff.
+
+## Enabling and Disabling Methods
+
+Toggle any payment method on or off without deleting it:
+
+1. Navigate to **Settings > Payment Methods**.
+2. Find the method in the list.
+3. Click the **Enable** toggle to switch it on (green) or off (grey).
+
+Disabled methods do not appear at the checkout screen. Use this to temporarily hide a method — for example, disabling card payments during a terminal outage — without losing its configuration or historical transaction data.
+
+<Accordion title="Can I delete a payment method?">
+  You can delete a custom payment method only if it has never been used in a transaction. If a method has existing sales records attached to it, disable it instead of deleting it to preserve your historical data. Disabled methods are hidden from checkout but remain in your reports.
+</Accordion>
+
+<Accordion title="Can I reorder payment methods on the checkout screen?">
+  Yes. Drag and drop the methods in the Payment Methods list to set the display order on the checkout screen. Put your most-used method (typically Cash or M-Pesa) at the top to speed up service.
+</Accordion>

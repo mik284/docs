@@ -1,0 +1,89 @@
+---
+title: "Create and Review Journal Entries in Pesa"
+sidebarTitle: "Journal Entries"
+description: "Post manual journal entries in BasePoint POS Pesa to record adjustments, accruals, or corrections that are not captured automatically by the POS."
+---
+
+Most financial activity in Pesa is recorded automatically — every completed POS sale generates an income entry, and expenses or bills create their own entries when saved. Journal entries are for everything else: transactions that the system cannot know about without your input. Use them to make manual adjustments, record opening balances, or correct an entry that was posted incorrectly.
+
+## When to Use Journal Entries
+
+Post a manual journal entry when you need to record:
+
+- **Depreciation** — periodic allocation of a fixed asset's cost over its useful life
+- **Accruals** — expenses incurred but not yet invoiced (e.g., accrued salaries at month-end)
+- **Opening balances** — entering your account balances when you first set up Pesa
+- **Corrections** — fixing a misclassified expense or an entry posted to the wrong account
+- **Owner equity movements** — capital injections, drawings, or profit transfers
+
+<Note>
+  POS sales, recorded expenses, and supplier bills all generate their own journal entries automatically. You only need to create manual entries for adjustments and transactions that fall outside normal day-to-day operations.
+</Note>
+
+## Creating a Journal Entry
+
+<Steps>
+  <Step title="Open the Journals page">
+    Navigate to **Accounting > Journals**.
+  </Step>
+  <Step title="Start a new entry">
+    Click **New Journal Entry** to open the entry form.
+  </Step>
+  <Step title="Set the date and reference">
+    Choose the **entry date** (typically the date the transaction occurred) and enter a **reference number** for easy retrieval — for example, *JE-2024-001*.
+  </Step>
+  <Step title="Add the debit line">
+    Click **Add Line**, select the account to debit, and enter the amount in the **Debit** column.
+  </Step>
+  <Step title="Add the credit line">
+    Click **Add Line** again, select the account to credit, and enter the same amount in the **Credit** column. A valid journal entry must always balance — total debits must equal total credits.
+  </Step>
+  <Step title="Write a description or memo">
+    Enter a clear memo explaining what this entry is for. Good memos make future audits and reviews much faster.
+  </Step>
+  <Step title="Save or post">
+    Choose **Save as Draft** to review the entry later, or click **Post** to lock it and immediately update your account balances.
+  </Step>
+</Steps>
+
+## Journal Entry Statuses
+
+<Accordion title="Draft">
+  The entry has been saved but not yet posted. It does not affect any account balances. You can edit or delete a draft entry freely.
+</Accordion>
+
+<Accordion title="Posted">
+  The entry has been confirmed and its amounts are reflected in your account balances and financial reports. A posted entry cannot be edited directly — you must reverse it to make a correction.
+</Accordion>
+
+<Accordion title="Reversed">
+  A reversing entry has been created against this entry, effectively cancelling its effect on account balances. Both the original and the reversing entry remain visible in the journal list for a complete audit trail.
+</Accordion>
+
+## Reversing a Journal Entry
+
+If you need to correct or cancel a posted entry:
+
+1. Open the posted journal entry from **Accounting > Journals**.
+2. Click **Reverse**.
+3. Pesa automatically creates a new entry with the debit and credit lines swapped, dated today.
+4. The reversing entry is posted immediately and the original entry is marked **Reversed**.
+
+After reversing, create a new journal entry with the correct values if needed.
+
+<Warning>
+  Posted journal entries cannot be edited. If you spot an error in a posted entry, use the Reverse function to cancel it, then post a new corrected entry. Editing posted transactions would compromise your audit trail.
+</Warning>
+
+## Credit and Debit Notes
+
+Use credit and debit notes to record adjustments against customers or suppliers outside of a full journal entry:
+
+- **Credit Note** — issued to reduce the amount a customer owes you (e.g., a refund or discount after an invoice is raised)
+- **Debit Note** — issued to a supplier to indicate that they owe you money (e.g., for returned goods)
+
+Navigate to **Accounting > Notes** to create and manage credit and debit notes. Each note is linked to the relevant customer or supplier account and automatically updates their outstanding balance.
+
+<Tip>
+  Write detailed memos on every journal entry — include the reason for the adjustment, who authorized it, and any supporting reference numbers. Clear memos turn an abstract list of debits and credits into a readable audit trail that saves hours during end-of-year reviews or external audits.
+</Tip>

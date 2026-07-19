@@ -1,0 +1,93 @@
+---
+title: "Set Up Tables and Floor Plans for Your Venue"
+sidebarTitle: "Tables & Floors"
+description: "Create floor sections, add tables with custom names and capacity, and manage seating layouts in BasePoint POS for your restaurant or hotel."
+---
+
+The **Tables** view is the command center for restaurant and hotel operations in BasePoint POS (Duka). When a staff member opens the POS, this is the first screen they see — a live floor plan grouped by section, showing which tables are available, occupied, or reserved. Before you can take your first order, set up your floor sections and tables so the layout mirrors your actual venue.
+
+## Adding Floor Sections
+
+Sections (also called **locations** or **slots** depending on your business type) group related tables into logical areas — for example, "Ground Floor", "Terrace", or "Private Dining". Every table must belong to a section.
+
+To create a section:
+
+1. Go to **Settings** → **Table Settings**.
+2. Select the **Locations Settings** tab.
+3. Click **Add Location** and enter a section name.
+4. Save. The section now appears as a tab on the Tables view.
+
+<Tip>
+  Choose section names that match how your staff naturally refer to areas of
+  your venue — "Rooftop Bar" is clearer than "Section C" and speeds up table
+  selection during a busy service.
+</Tip>
+
+## Adding Tables
+
+Once your sections exist, add individual tables to each one.
+
+<Steps>
+  <Step title="Open Table Settings">
+    Navigate to **Settings** → **Table Settings** and select the **Tables Settings** tab.
+  </Step>
+  <Step title="Click Add Table">
+    Click the **Add Table** button in the top-right corner of the settings panel.
+  </Step>
+  <Step title="Enter a name and capacity">
+    Type a descriptive table name or number (e.g., "Window Seat 1" or "T-12") and set the seating capacity.
+  </Step>
+  <Step title="Assign to a section">
+    Select the floor section this table belongs to from the **Location** dropdown.
+  </Step>
+  <Step title="Save">
+    Click **Save**. The table immediately appears in the Tables view under its assigned section tab.
+  </Step>
+</Steps>
+
+<Tip>
+  Use meaningful names instead of generic codes. "Window Seat 1" tells a
+  waiter exactly where to go; "T1" does not. Descriptive names also make order
+  receipts and kitchen tickets easier to read.
+</Tip>
+
+## Table Status Colors
+
+Each table card on the floor plan displays a color that reflects its current state at a glance:
+
+- **Green — Available:** The table is unoccupied and ready to seat guests.
+- **Red / Amber — Occupied:** An active order is open on this table.
+- **Blue — Reserved:** The table has been set aside for an upcoming booking.
+
+Click any table to open it and view its active order, or to start a new one.
+
+<Note>
+  Drag-and-drop table rearrangement on the floor plan is coming in a future
+  update. For now, the display order follows the order in which tables were
+  created in Table Settings.
+</Note>
+
+## POS Modes
+
+BasePoint POS supports four operating modes. The Tables view is active in restaurant and hotel modes. Switch modes in **Settings** to match your business type.
+
+<Tabs>
+  <Tab title="Restaurant Mode">
+    The default mode for food-and-beverage venues. The home screen shows your full floor plan, grouped by section tabs. Tap a table to open an order, browse your menu, and send items to the kitchen. Each order is tied to a specific table throughout the service cycle.
+  </Tab>
+  <Tab title="Hotel Mode">
+    Designed for hotel in-room dining and room service. Tables are replaced by **Rooms**, and sections represent **Floors** of the property. The ordering flow is identical — select a room, add items, and confirm.
+  </Tab>
+  <Tab title="Hospital Mode">
+    Configured for ward or bed-based service in healthcare facilities. Sections map to wards and individual entries represent patient beds or bays. Orders are placed and tracked per bed.
+  </Tab>
+  <Tab title="Retail Mode">
+    A queue-based mode with no floor plan. Customers are served sequentially and each transaction is an independent cart. This mode is ideal for shops, pharmacies, and counter-service businesses where seating is not relevant.
+  </Tab>
+</Tabs>
+
+<Info>
+  Your active POS mode is set by your system administrator under **Settings** →
+  **POS Mode**. Contact your BasePoint reseller if you need to switch modes
+  after initial setup.
+</Info>

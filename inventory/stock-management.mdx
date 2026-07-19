@@ -1,0 +1,134 @@
+---
+title: "Track and Manage Stock Levels in BasePoint POS"
+sidebarTitle: "Stock Management"
+description: "Monitor inventory levels, record stock adjustments, transfer stock between shop locations, and set reorder alerts in BasePoint POS."
+---
+
+Keeping accurate stock records prevents over-selling, reduces waste, and gives you confidence in your purchasing decisions. BasePoint POS tracks inventory in real time — every sale automatically deducts from the relevant product's stock count, and every adjustment or incoming purchase order updates the ledger with a timestamped entry. Whether you run a single café or a multi-branch retail chain, the Inventory module gives you the visibility you need to stay stocked and profitable.
+
+---
+
+## Viewing Stock Levels
+
+The **Inventory** screen gives you a live snapshot of everything in your stockroom.
+
+1. Click **Inventory** in the left navigation menu.
+2. The stock list shows each tracked product with its **current quantity**, **cost price**, **reorder level**, and **stock value**.
+3. Use the **Category** filter at the top to narrow the list to a specific product group.
+4. Click the **Low Stock** filter to see only products at or below their reorder level — useful for planning your next purchase order.
+
+<Info>
+  Only products with **Track Inventory** enabled appear in the Inventory list. If a product is missing, open it in **Store** and toggle on **Track Inventory**.
+</Info>
+
+---
+
+## Recording Stock Adjustments
+
+A stock adjustment lets you correct the recorded quantity for a product outside of a normal sale — for example, when stock is received, written off as wastage, or corrected after a physical count.
+
+<Steps>
+  <Step title="Find the product">
+    Go to **Inventory** and locate the product you want to adjust. Use the search bar or category filter to find it quickly.
+  </Step>
+  <Step title="Open the adjustment form">
+    Click on the product row, then click **Adjust Stock** to open the adjustment form.
+  </Step>
+  <Step title="Select the adjustment type">
+    Choose one of the three adjustment types:
+    - **Add** — increases the stock count (e.g., received a delivery).
+    - **Remove** — decreases the stock count (e.g., wastage or damage).
+    - **Set Exact** — overrides the current quantity with a precise figure (e.g., after a physical stocktake).
+  </Step>
+  <Step title="Enter the quantity and reason">
+    Type the quantity to add, remove, or set. Then select a **reason** from the dropdown:
+
+    | Reason | When to use |
+    |---|---|
+    | Received delivery | Goods arrived from a supplier outside of a formal PO |
+    | Wastage | Product expired, spoiled, or was discarded |
+    | Damage | Items broken or otherwise unsellable |
+    | Counting correction | Discrepancy found during a physical stock count |
+    | Transfer | Stock moved between locations (use the Transfers feature for multi-shop) |
+  </Step>
+  <Step title="Confirm the adjustment">
+    Click **Confirm**. The stock level updates immediately and the adjustment is logged to the audit trail.
+  </Step>
+</Steps>
+
+<Warning>
+  Stock adjustments are permanent audit records. Every adjustment is saved with a **timestamp** and the **logged-in user's name** — you cannot edit or delete adjustment records after they are confirmed. If you make an error, create a new corrective adjustment.
+</Warning>
+
+---
+
+## Stock Transfers
+
+If your business operates multiple shop locations, you can move stock from one branch to another directly within BasePoint POS — no manual adjustment needed at either end.
+
+<Steps>
+  <Step title="Open the Transfers tab">
+    Go to **Inventory** and click the **Transfers** tab at the top of the page.
+  </Step>
+  <Step title="Start a new transfer">
+    Click **New Transfer**.
+  </Step>
+  <Step title="Set the source and destination">
+    Select the **Source Shop** (the branch sending the stock) and the **Destination Shop** (the branch receiving it).
+  </Step>
+  <Step title="Add products and quantities">
+    Click **Add Item**, select the product, and enter the quantity to transfer. Add more lines for additional products in the same transfer.
+  </Step>
+  <Step title="Submit the transfer">
+    Click **Submit**. Stock is deducted from the source shop immediately and added to the destination shop once the transfer is marked as received.
+  </Step>
+</Steps>
+
+<Note>
+  The receiving shop must **confirm receipt** of the transfer before their stock count updates. This two-step process prevents discrepancies if goods are in transit.
+</Note>
+
+---
+
+## Low Stock Alerts
+
+Set a reorder level on each product so BasePoint POS can warn you before you run out.
+
+- **Set a reorder level:** Open a product in **Store**, enable **Track Inventory**, and enter a value in the **Reorder Level** field. For example, entering `10` means the product appears in the low-stock list when quantity drops to 10 or below.
+- **View low-stock products:** In **Inventory**, click the **Low Stock** filter to see all products at or below their reorder level.
+- **Email alerts:** Navigate to **Settings > Notification Settings** to configure automated low-stock email alerts. You can specify recipient email addresses and set alert frequency.
+
+<Tip>
+  Review the low-stock list every morning before your business opens. Catching shortages early gives you time to contact suppliers and arrange deliveries before stock runs out during service.
+</Tip>
+
+---
+
+## Purchase Orders
+
+Create a formal purchase order (PO) to record stock you have ordered from a supplier. When goods arrive, receiving the PO automatically updates your stock levels.
+
+<Steps>
+  <Step title="Open Purchase Orders">
+    Go to **Inventory** and click the **Purchase Orders** tab.
+  </Step>
+  <Step title="Create a new PO">
+    Click **New Purchase Order**.
+  </Step>
+  <Step title="Select the supplier">
+    Choose the supplier from the dropdown. If the supplier is not listed, add them first under **Settings > Suppliers**.
+  </Step>
+  <Step title="Add line items">
+    Click **Add Item** and select the product, quantity ordered, and agreed unit cost. Repeat for each product in the order.
+  </Step>
+  <Step title="Submit the purchase order">
+    Click **Submit PO**. The PO is created with a **Sent** status and appears in the Purchase Orders list.
+  </Step>
+  <Step title="Receive the goods">
+    When the delivery arrives, open the PO and click **Mark as Received** (or **Partial Received** if only some items arrived). Stock levels update automatically for all received items.
+  </Step>
+</Steps>
+
+<Tip>
+  Use the **Set Exact** adjustment type during a regular scheduled stocktake — count every item physically on the shelf, then enter those exact figures into BasePoint POS to correct any drift between the recorded and actual quantities. Doing this monthly keeps your inventory data reliable.
+</Tip>

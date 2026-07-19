@@ -1,0 +1,61 @@
+---
+title: "Set Up and Manage Your Chart of Accounts"
+sidebarTitle: "Chart of Accounts"
+description: "Create and organize account codes in BasePoint POS Pesa module. Group accounts by type — assets, liabilities, equity, income, and expenses."
+---
+
+A chart of accounts (COA) is the master list of every financial account your business uses to record transactions. Each account has a unique code and belongs to a type that determines how it behaves in your financial statements. A well-structured COA makes your Profit & Loss report, Balance Sheet, and tax filings accurate and easy to read.
+
+## Account Types
+
+Pesa organizes all accounts into five standard types:
+
+| Type | What It Represents | Examples |
+|---|---|---|
+| **Asset** | Resources your business owns or is owed | Cash, Bank, Accounts Receivable, Inventory, Equipment |
+| **Liability** | Obligations your business owes to others | Accounts Payable, Loans, Tax Payable, Accrued Expenses |
+| **Equity** | Owner's stake in the business | Owner's Capital, Retained Earnings, Drawings |
+| **Income / Revenue** | Money earned from business activities | Sales Revenue, Service Income, Rental Income |
+| **Expense** | Costs incurred to run the business | Rent, Salaries, Utilities, Marketing, Supplies |
+
+## Viewing Your Chart of Accounts
+
+Navigate to **Accounting > Accounts** to see your full chart of accounts. BasePoint POS pre-creates a default set of accounts covering the most common categories for hospitality, retail, and food service businesses. You can use these defaults as-is, edit them to match your naming conventions, or add new accounts as your business requires.
+
+Accounts are displayed in a filterable table. Use the type tabs at the top (**All**, **Asset**, **Liability**, **Equity**, **Revenue**, **Expense**) to narrow the list. You can also export your chart of accounts to Excel or PDF using the export button in the top-right corner.
+
+## Adding a New Account
+
+<Steps>
+  <Step title="Open the Accounts page">
+    Navigate to **Accounting > Accounts**.
+  </Step>
+  <Step title="Click Add Account">
+    Select **Add Account** from the top-right toolbar to open the account form.
+  </Step>
+  <Step title="Enter account details">
+    Fill in the following fields:
+    - **Account Name** — a clear, descriptive name (e.g., *Mpesa Float*, *Office Supplies*)
+    - **Account Code** — a unique numeric code (e.g., *1050*)
+    - **Account Type** — select from Asset, Liability, Equity, Income, or Expense
+    - **Parent Account** — select a parent to create this as a sub-account (optional)
+  </Step>
+  <Step title="Add a description">
+    Enter a short description explaining the purpose of the account. This is optional but helps your team understand when to use it.
+  </Step>
+  <Step title="Save">
+    Click **Save**. The account is immediately available for use in journal entries, expenses, and bills.
+  </Step>
+</Steps>
+
+## Editing and Deactivating Accounts
+
+Click the **edit icon** on any account row to update its name, code, or description. To remove an account from active use, click the **toggle** icon to deactivate it. Deactivated accounts remain in your records and retain their transaction history — they simply no longer appear in dropdowns when creating new entries.
+
+<Warning>
+  Do not change an account's code after transactions have already been posted to it. Changing the code on an account with existing entries can break audit trails and cause reporting inconsistencies. If you need to restructure, deactivate the old account and create a new one with the correct code.
+</Warning>
+
+<Tip>
+  Follow a consistent numbering convention from the start. A common structure for small businesses is: **1000s** for Assets, **2000s** for Liabilities, **3000s** for Equity, **4000s** for Income, and **5000s** for Expenses. Sub-accounts use increments within each range (e.g., 1001, 1002) so your COA stays organized as it grows.
+</Tip>

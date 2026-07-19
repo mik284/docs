@@ -1,0 +1,70 @@
+---
+title: "Pesa Accounting Module Overview and Setup"
+sidebarTitle: "Overview"
+description: "Pesa is the accounting module in BasePoint POS. Track income and expenses, manage your chart of accounts, reconcile bank statements, and generate financial reports."
+---
+
+Pesa is the built-in accounting module in BasePoint POS. It connects directly to your point-of-sale activity so that every completed sale automatically becomes an income entry — no duplicate data entry, no separate accounting software required. Use Pesa to manage your chart of accounts, post journal entries, reconcile bank statements, record expenses, and monitor your business's financial health from a single dashboard.
+
+## Module Pages
+
+<CardGroup cols={2}>
+  <Card title="Chart of Accounts" icon="book" href="/accounting/chart-of-accounts">
+    Create and organize account codes grouped by type — assets, liabilities, equity, income, and expenses.
+  </Card>
+  <Card title="Journal Entries" icon="file-pen" href="/accounting/journal-entries">
+    Post manual adjustments, accruals, opening balances, and corrections that are not captured automatically.
+  </Card>
+  <Card title="Bank Reconciliation" icon="building-columns" href="/accounting/bank-reconciliation">
+    Import bank statements and match transactions against your recorded entries to verify your balances.
+  </Card>
+  <Card title="Expenses & Income" icon="arrow-right-arrow-left" href="/accounting/expenses-and-income">
+    Record expenses, supplier bills, non-POS income, and petty cash transactions.
+  </Card>
+</CardGroup>
+
+## What Pesa Tracks
+
+Pesa gives you a complete picture of your business finances by consolidating all financial activity in one place:
+
+- **Sales revenue** — automatically imported from every completed POS transaction
+- **Expenses** — manually entered costs such as rent, utilities, salaries, and supplies
+- **Bills from suppliers** — invoices received and tracked through to payment
+- **Bank statement imports** — uploaded statements matched against your recorded entries
+- **Journal entries** — manual adjustments for depreciation, accruals, corrections, and equity movements
+
+<Note>
+  POS sales are automatically recorded as income entries in Pesa the moment an order is completed. You do not need to enter sales manually — they appear in Accounting > Sales Receipts in real time.
+</Note>
+
+## Accounting Dashboard
+
+The Pesa dashboard gives you an at-a-glance view of your financial position. Access it by clicking the **Pesa** tab on the BasePoint POS home dashboard.
+
+The dashboard displays:
+
+| Metric | Description |
+|---|---|
+| **Total Revenue** | Cumulative income for the selected period |
+| **Total Expenses** | All recorded expenses and bills for the period |
+| **Net Profit / Loss** | Revenue minus expenses — positive is profit, negative is a loss |
+| **Recent Transactions** | A live feed of the latest journal entries and receipts |
+
+Use the period selector (Today, This Week, This Month, This Year, or Custom) at the top of the dashboard to adjust the reporting window. Charts show revenue and expense trends over time so you can spot patterns quickly.
+
+## Multi-Currency Support
+
+Pesa supports transactions in multiple currencies, making it suitable for businesses that deal with international suppliers or customers.
+
+To add a currency and set its exchange rate:
+
+1. Navigate to **Accounting > Currencies**.
+2. Click **Add Currency**.
+3. Select the currency code and enter the current exchange rate against your base currency.
+4. Save.
+
+Your **base currency** is configured in **System Setup > General Settings**. All reports and dashboards display values in the base currency, with original transaction amounts shown alongside converted figures.
+
+<Tip>
+  Reconcile your bank statement at the end of every month. Monthly reconciliation catches discrepancies — such as bank fees, duplicate entries, or missed transactions — before they compound and become harder to trace.
+</Tip>

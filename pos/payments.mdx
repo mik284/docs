@@ -1,0 +1,88 @@
+---
+title: "Process Payments and Complete Transactions"
+sidebarTitle: "Payments"
+description: "Accept cash, card, mobile money, and other configured payment methods in BasePoint POS. Split bills, apply discounts, and print or send receipts."
+---
+
+BasePoint POS (Duka) handles the full payment cycle — from selecting a tender method to issuing a receipt — in a single streamlined flow. Supported payment methods are configured by your administrator, so your cashiers only see the options that are relevant to your business. The system calculates change for cash transactions automatically and records every completed payment against its order for reporting and audit purposes.
+
+## Processing a Payment
+
+<Steps>
+  <Step title="Open the cart and click Pay">
+    From an open order or table cart, click the **Pay** or **Checkout** button at the bottom of the cart panel. This opens the payment modal.
+  </Step>
+  <Step title="Review the total amount due">
+    The payment modal displays the order subtotal, any applied discounts, VAT, and the **grand total** due. Verify these figures before proceeding.
+  </Step>
+  <Step title="Select a payment method">
+    Choose the customer's preferred method from the available options — for example, **Cash**, **Credit/Debit Card**, **M-Pesa**, or **Bank Transfer**. Only methods enabled for your shop appear in this list.
+  </Step>
+  <Step title="Enter the tendered amount (cash payments)">
+    For cash transactions, type the amount the customer hands over in the **Tendered** field. The system instantly calculates and displays the **change** due back to the customer.
+  </Step>
+  <Step title="Confirm the payment">
+    Click **Confirm Payment**. The order is marked as paid, the table status resets to **Available** in restaurant mode, and the transaction is recorded in the system.
+  </Step>
+  <Step title="Print or send the receipt">
+    The Print Bill modal appears automatically. Choose to **Print Receipt**, **Print Bill**, or **Skip**. You can also send the receipt via email from this modal. See [Receipts & Printing](/pos/receipts-and-printing) for full details.
+  </Step>
+</Steps>
+
+<Warning>
+  Once a payment is confirmed it cannot be automatically reversed from the
+  payment screen. To correct a mistaken transaction, navigate to the
+  **Refunds** page and issue a manual refund against the original order number.
+</Warning>
+
+## Supported Payment Methods
+
+Payment methods are enabled and configured in **Settings** → **Payment Methods**. Your administrator can turn each method on or off and set display names. Common methods include:
+
+| Method | Notes |
+|---|---|
+| **Cash** | Calculates change automatically when tendered amount is entered. |
+| **Credit / Debit Card** | Records the card transaction; connect to an external card terminal as needed. |
+| **M-Pesa / Mobile Money** | Supports STK push prompts where integrated; manual confirmation also available. |
+| **Bank Transfer** | Records the transfer reference for reconciliation. |
+| **Loyalty / Voucher** | Applied as a deduction before the remaining balance is collected via another method. |
+
+<Info>
+  If you need to add a new payment method (e.g., a local wallet or in-house
+  credit account), contact your BasePoint administrator. Custom methods can be
+  created and enabled from the Payment Methods settings page.
+</Info>
+
+## Split Payments
+
+When a bill needs to be divided — either between multiple payment methods or between multiple customers — use the **Split** option in the cart before proceeding to checkout.
+
+1. Tap **Split** in the cart panel.
+2. Choose whether to split **by amount** (enter a specific value per tender) or **by item** (assign individual items to each customer).
+3. Process each portion separately through the payment modal, selecting the appropriate method for each split.
+4. The order is marked as fully paid once all portions are settled.
+
+## Applying Discounts
+
+You can apply discounts at two levels:
+
+- **Item-level discount:** Tap the edit icon on a cart line item and enter a percentage or fixed discount for that specific product.
+- **Order-level discount:** Tap **Add Discount** at the bottom of the cart to apply a discount across the entire order total.
+
+Both discount types are recorded on the receipt and appear in sales reports. Percentage discounts are calculated against the line total (exclusive of VAT by default).
+
+## Processing Refunds
+
+To issue a refund on a previously completed transaction:
+
+1. Navigate to **Orders** → **Refunds** from the main menu.
+2. Search for the original order by order number, table, or date.
+3. Select the items to refund and confirm the refund amount.
+4. The refund is recorded against the original payment method for reporting purposes.
+
+<Note>
+  If your BasePoint account has **DigiTax / ETR integration** enabled, a
+  compliant tax invoice with a KRA verification QR code is automatically
+  generated on every confirmed transaction. No additional steps are required —
+  the invoice number appears on the printed receipt.
+</Note>

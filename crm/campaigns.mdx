@@ -1,0 +1,77 @@
+---
+title: "Create and Track Marketing Campaigns in Mteja CRM"
+sidebarTitle: "Campaigns"
+description: "Run targeted marketing campaigns in BasePoint POS Mteja CRM. Set a budget, define your audience, send messages, and track responses and conversions."
+---
+
+The Campaigns feature in Mteja CRM lets you send targeted messages to your customer base and measure the results. Whether you're promoting a seasonal offer, announcing a new menu, or re-engaging dormant customers, campaigns let you reach the right audience through the right channel — and track every response, lead, and sale that follows.
+
+<Note>
+  WhatsApp campaigns require your WhatsApp sender number to be registered in **System Setup > WhatsApp Registration** before you can launch. See [Notifications](/settings/notifications) for setup steps.
+</Note>
+
+## Creating a Campaign
+
+<Steps>
+  <Step title="Open the Campaigns page">
+    Navigate to **CRM** in the left sidebar, then select **Campaigns**.
+  </Step>
+  <Step title="Start a new campaign">
+    Click **New Campaign** in the top-right corner.
+  </Step>
+  <Step title="Configure your campaign">
+    Fill in the campaign details:
+
+    - **Campaign Name** — a descriptive internal name (e.g. "March Happy Hour Promo")
+    - **Type** — the delivery channel: **WhatsApp**, **Email**, or **SMS**
+    - **Target Audience** — choose who receives the message:
+      - *All Customers* — your entire customer database
+      - *Filtered Segment* — apply filters such as last visit date, total spend, location, or customer tag
+    - **Message Content** — the body of your message. Use template variables (see tip below) to personalize each message.
+  </Step>
+  <Step title="Set the schedule and budget">
+    - **Start Date** — when the campaign launches
+    - **End Date** — when the campaign closes (optional for one-time sends)
+    - **Budget** — the planned spend for this campaign, used to calculate ROI in reporting
+  </Step>
+  <Step title="Launch the campaign">
+    Review all settings, then click **Launch**. BasePoint POS queues the messages for delivery. You can monitor progress from the Campaigns dashboard immediately after launch.
+  </Step>
+</Steps>
+
+<Tip>
+  Personalize every message using template variables such as `{{customer_name}}`, `{{shop_name}}`, and `{{promo_code}}`. A message that begins with "Hi Sarah, …" consistently outperforms a generic broadcast. Enter variables in double curly braces exactly as shown in the template editor.
+</Tip>
+
+## Campaign Types
+
+<CardGroup cols={3}>
+  <Card title="WhatsApp Bulk Message" icon="message-circle">
+    Send a rich-text or media message directly to customers' WhatsApp numbers. Requires a registered WhatsApp Business sender. Ideal for high-open-rate promotions and order follow-ups.
+  </Card>
+  <Card title="Email Newsletter" icon="mail">
+    Deliver a formatted email to your customers' inboxes. Best for detailed announcements, menus, event invitations, and newsletters where longer content works well.
+  </Card>
+  <Card title="SMS Blast" icon="smartphone">
+    Send a short plain-text message to customers' mobile numbers. High deliverability even without a smartphone. Great for flash sales, reminders, and time-sensitive alerts.
+  </Card>
+</CardGroup>
+
+## Tracking Results
+
+After a campaign launches, the Campaigns dashboard updates in real time with performance metrics. Click any campaign row to view its full report:
+
+| Metric | Description |
+|---|---|
+| **Messages Sent** | Total number of messages dispatched |
+| **Delivered** | Messages confirmed as delivered to recipients |
+| **Opened** | Messages opened or read (WhatsApp read receipts / email open tracking) |
+| **Responded** | Recipients who replied or clicked a link |
+| **Leads Generated** | New CRM leads created as a result of campaign responses |
+| **Revenue Attributed** | Sales linked to customers who received this campaign |
+
+Use the **Revenue Attributed** metric to calculate your campaign ROI against the budget you set at creation.
+
+<Accordion title="Why do delivered and opened counts differ?">
+  Delivery confirms the message reached the recipient's device or inbox. Opens are tracked separately — for WhatsApp this uses read receipts (blue ticks), and for email it uses a tracking pixel. Recipients who have read receipts disabled or email image loading blocked will show as delivered but not opened. This is normal and expected.
+</Accordion>

@@ -1,0 +1,101 @@
+---
+title: "Capture and Manage Sales Leads with Mteja CRM"
+sidebarTitle: "Leads"
+description: "Track potential customers through your sales pipeline in BasePoint POS Mteja CRM. Add leads, record activities, and advance them through stages to close deals."
+---
+
+The Mteja CRM Leads module gives you a structured pipeline for tracking potential customers from the moment of first contact all the way through to a closed deal. Instead of relying on spreadsheets or memory, every lead lives in one place — with a history of activities, a clear stage, and an assigned owner — so your sales team always knows exactly what to do next.
+
+<Note>
+  The Mteja CRM module must be enabled on your BasePoint POS subscription before the Leads section appears in your navigation. Contact your account manager or visit your plan settings to activate it.
+</Note>
+
+## Lead Stages
+
+Every lead moves through a series of pipeline stages that reflect where the prospect is in your sales process. BasePoint POS provides the following default stages:
+
+| Stage | Meaning |
+|---|---|
+| **New** | Lead has been captured but not yet contacted |
+| **Contacted** | Initial outreach has been made |
+| **Qualified** | Lead meets your criteria and is worth pursuing |
+| **Proposal** | An offer or quote has been sent |
+| **Won** | Deal closed successfully — convert to a customer |
+| **Lost** | Lead did not convert; archived for future reference |
+
+## Adding a Lead
+
+Capture new leads as soon as you hear about a potential customer — walk-ins, referrals, online inquiries, and more.
+
+<Steps>
+  <Step title="Open the Leads list">
+    Navigate to **CRM** in the left sidebar, then select **Leads**.
+  </Step>
+  <Step title="Start a new lead">
+    Click **Add Lead** in the top-right corner of the page.
+  </Step>
+  <Step title="Fill in the lead details">
+    Complete the lead form with the following information:
+
+    - **Lead Name** — the prospect's name or company name
+    - **Contact Person** — primary point of contact (if different from lead name)
+    - **Phone** — contact phone number
+    - **Email** — contact email address
+    - **Source** — where this lead came from (e.g. Walk-In, Referral, Online, Social Media, Event)
+    - **Assigned To** — the staff member responsible for following up
+    - **Stage** — the initial pipeline stage (typically *New*)
+    - **Follow-up Date** — when the next action should take place
+    - **Notes** — any additional context about the lead
+  </Step>
+  <Step title="Save the lead">
+    Click **Save**. The lead appears in your Leads list and is visible on the pipeline board.
+  </Step>
+</Steps>
+
+<Tip>
+  Set a **Follow-up Date** on every lead at the time of creation. Leads without a follow-up date are easy to forget — this single habit ensures nothing slips through the cracks.
+</Tip>
+
+## Recording Lead Activities
+
+Keep a full audit trail of every interaction with a lead by logging activities. This is especially useful for teams, so any staff member can pick up where a colleague left off.
+
+To log an activity:
+
+1. Open the lead by clicking its name in the Leads list.
+2. In the lead detail drawer, scroll to the **Activities** section and click **Add Activity**.
+3. Select the activity type: **Call**, **Meeting**, **Email**, or **Note**.
+4. Enter a description or outcome of the interaction.
+5. Click **Save**.
+
+Each activity is timestamped automatically and attributed to the logged-in user. The full activity timeline is visible inside the lead detail.
+
+## Advancing a Lead
+
+Move a lead forward as it progresses through your pipeline in one of two ways:
+
+- **Drag and drop** — on the Kanban board view, drag the lead card from its current column into the next stage column.
+- **Edit the stage field** — open the lead, click **Edit**, change the **Stage** dropdown to the new stage, and save.
+
+When a lead reaches the **Won** stage, you can convert it to a full customer record. Click **Convert to Customer** inside the lead detail drawer. BasePoint POS pre-fills the customer form with the lead's contact details — review and save to add them to your customer database.
+
+## Lead Workflows
+
+Automate repetitive actions in your pipeline using Lead Workflows. Workflows trigger automatic stage transitions, task assignments, or follow-up reminders based on rules you define.
+
+To manage workflows, navigate to **CRM > Workflows**. Examples of what you can automate:
+
+<CardGroup cols={2}>
+  <Card title="Auto-assign on stage change" icon="user-check">
+    Automatically reassign a lead to a senior rep when it moves to the Proposal stage.
+  </Card>
+  <Card title="Scheduled follow-up tasks" icon="calendar-clock">
+    Create a follow-up task automatically when a lead is marked as Contacted.
+  </Card>
+  <Card title="Stage escalation" icon="arrow-up">
+    Advance a lead to Qualified after a meeting activity is logged.
+  </Card>
+  <Card title="Lost lead archiving" icon="archive">
+    Automatically archive leads that have been in the Lost stage for more than 30 days.
+  </Card>
+</CardGroup>

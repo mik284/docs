@@ -1,0 +1,142 @@
+---
+title: "Manage Suppliers and Purchase Orders in BasePoint POS"
+sidebarTitle: "Suppliers"
+description: "Add supplier contacts, link them to products, and raise purchase orders directly in BasePoint POS to streamline your restocking workflow."
+---
+
+The Suppliers feature in BasePoint POS gives you a central place to store all your supplier contacts and manage the full restocking cycle — from raising a purchase order to receiving goods and updating your stock levels. By keeping supplier information and purchase history in one system, you reduce the time spent chasing deliveries and make it easier to spot patterns in your purchasing.
+
+---
+
+## Adding a Supplier
+
+Add each of your suppliers to BasePoint POS so you can link them to products and attach them to purchase orders.
+
+<Steps>
+  <Step title="Open Supplier Settings">
+    Navigate to **Settings** in the left sidebar and select **Suppliers**.
+  </Step>
+  <Step title="Create a new supplier">
+    Click **Add Supplier** to open the supplier form.
+  </Step>
+  <Step title="Fill in the supplier details">
+    Complete the following fields:
+
+    | Field | Description |
+    |---|---|
+    | **Supplier Name** | The business or trading name of the supplier |
+    | **Contact Person** | The name of your main point of contact at that supplier |
+    | **Phone** | A direct phone number — used for quick reorder calls and WhatsApp notifications |
+    | **Email** | The email address for sending purchase orders |
+    | **Address** | The supplier's physical or postal address |
+  </Step>
+  <Step title="Save the supplier">
+    Click **Save**. The supplier now appears in the Suppliers list and is available for selection when creating purchase orders and editing products.
+  </Step>
+</Steps>
+
+<Tip>
+  Keep supplier **phone numbers** up to date. BasePoint POS can send automated WhatsApp order notifications to your suppliers when a purchase order is raised — an accurate number ensures these reach the right person without delay.
+</Tip>
+
+---
+
+## Linking Suppliers to Products
+
+Linking a default supplier to a product creates a direct connection between your stock levels and the vendor who supplies that item. This makes it easier to generate accurate purchase orders when stock runs low.
+
+To link a supplier to a product:
+
+1. Go to **Store** and open the product you want to update (or create a new product).
+2. In the product form, locate the **Default Supplier** field and select the supplier from the dropdown.
+3. Click **Save**.
+
+When BasePoint POS generates low-stock alerts or you create a purchase order for that product, the default supplier is pre-selected automatically.
+
+<Info>
+  A product can have only one default supplier at a time. If you source the same product from multiple vendors, create separate products with different names (e.g., *"Coffee Beans – Supplier A"* vs *"Coffee Beans – Supplier B"*) or manage alternative suppliers within the purchase order at the time of ordering.
+</Info>
+
+---
+
+## Creating a Purchase Order
+
+Raise a purchase order (PO) directly in BasePoint POS to formally record what you have ordered and from whom.
+
+<Steps>
+  <Step title="Open Purchase Orders">
+    Go to **Inventory** in the left navigation menu, then click the **Purchase Orders** tab.
+  </Step>
+  <Step title="Start a new purchase order">
+    Click **New Purchase Order**.
+  </Step>
+  <Step title="Select the supplier">
+    Choose the supplier from the dropdown. The supplier's contact details populate automatically.
+  </Step>
+  <Step title="Add line items">
+    Click **Add Item** for each product you are ordering. For each line, select the **product**, enter the **quantity ordered**, and confirm the **unit cost**. Add as many lines as needed.
+  </Step>
+  <Step title="Submit the purchase order">
+    Click **Submit PO** to finalise the order. The PO is assigned a reference number and moves to **Sent** status.
+  </Step>
+</Steps>
+
+### Purchase order statuses
+
+<CardGroup cols={2}>
+  <Card title="Draft" icon="pencil">
+    The PO has been created but not yet submitted. You can still edit line items.
+  </Card>
+  <Card title="Sent" icon="paper-plane">
+    The PO has been submitted and the supplier has been notified (where applicable).
+  </Card>
+  <Card title="Received" icon="circle-check">
+    All ordered items have been received and stock levels have been updated in full.
+  </Card>
+  <Card title="Partial" icon="circle-half-stroke">
+    Some items have been received but the order is not yet complete. Outstanding quantities remain open.
+  </Card>
+</CardGroup>
+
+---
+
+## Receiving Stock
+
+When a delivery arrives, mark the corresponding purchase order as received to update your inventory automatically.
+
+<Steps>
+  <Step title="Find the open purchase order">
+    Go to **Inventory > Purchase Orders** and locate the PO using the supplier name or PO reference number.
+  </Step>
+  <Step title="Mark as received">
+    Open the PO and click **Mark as Received** if the full order has arrived. If only part of the delivery came through, click **Partial Received** and enter the actual quantities received for each line item.
+  </Step>
+  <Step title="Confirm">
+    Click **Confirm**. Stock levels for all received products update immediately. A partial receipt leaves the PO in **Partial** status so you can record the remaining items when they arrive.
+  </Step>
+</Steps>
+
+<Note>
+  Marking a PO as received creates a stock adjustment entry in the audit trail, just like a manual adjustment. This keeps your inventory history clean and traceable back to the original purchase order.
+</Note>
+
+---
+
+## Supplier Reports
+
+Review your purchase history and monitor outstanding orders for each supplier without leaving BasePoint POS.
+
+<Accordion title="View purchase history per supplier">
+  1. Go to **Settings > Suppliers** and click the supplier's name.
+  2. Select the **Purchase History** tab to see a chronological list of all POs raised with that supplier, including dates, quantities, costs, and statuses.
+</Accordion>
+
+<Accordion title="View outstanding purchase orders">
+  1. Go to **Inventory > Purchase Orders**.
+  2. Filter by **Status: Sent** or **Status: Partial** to see all open orders.
+  3. Use the **Supplier** filter to narrow the list to a specific vendor.
+</Accordion>
+
+<Accordion title="Export purchase data">
+  From the Purchase Orders list, click **Export** to download all PO records as a CSV file. Use this for reconciling invoices or sharing purchasing data with your accountant.
+</Accordion>

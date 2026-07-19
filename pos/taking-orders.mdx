@@ -1,0 +1,85 @@
+---
+title: "Take and Manage Customer Orders in BasePoint POS"
+sidebarTitle: "Taking Orders"
+description: "Select a table, browse your menu by category, add items to the cart with modifiers, and send orders to the kitchen from the BasePoint POS dashboard."
+---
+
+Every sale in BasePoint POS (Duka) starts with an order. In restaurant mode, that means selecting a table from the floor plan and building a cart against it. In retail mode, it means opening a fresh cart for a walk-in customer. Either way, the flow is the same: pick a table or cart, browse the menu by category, add items, configure any modifiers, and confirm. The order is then routed to the kitchen or fulfilled at the counter.
+
+## Placing an Order
+
+<Steps>
+  <Step title="Select a table or start a cart">
+    In **restaurant** or **hotel** mode, tap an available table on the Tables view. The POS opens that table's order screen. In **retail** mode, the POS opens a new cart automatically when you navigate to the order screen.
+  </Step>
+  <Step title="Browse the menu by category">
+    Categories are listed in the left sidebar. Tap a category to load its products in the main panel. Sub-categories appear as tabs within the panel. Scroll or swipe to browse all items.
+  </Step>
+  <Step title="Add items to the cart">
+    Tap any product card to add one unit to the cart on the right panel. The cart updates instantly and shows a running subtotal.
+  </Step>
+  <Step title="Adjust quantity">
+    In the cart, use the **+** and **−** controls next to each line item to increase or decrease the quantity. You can also type the quantity directly into the quantity field.
+  </Step>
+  <Step title="Add modifiers or notes (optional)">
+    Tap the edit icon on a cart line to open the item detail panel. Here you can select available **modifiers** or **add-ons** (e.g., "Extra cheese", "No onions") and type a free-text note for the kitchen.
+  </Step>
+  <Step title="Review the cart">
+    Check the cart panel on the right for item quantities, line totals, and the grand total. Apply a discount at this stage if needed (see [Cart Actions](#cart-actions) below).
+  </Step>
+  <Step title="Place the order">
+    Tap **Place Order** to confirm and send the order to the kitchen printer or kitchen display. The table status updates to **Occupied** on the floor plan.
+  </Step>
+</Steps>
+
+## Searching for Items
+
+Use the **search bar** at the top of the menu panel to find products by name. The results filter in real time as you type.
+
+For high-volume retail environments, click the **QR / Barcode Scanner** icon in the menu toolbar to activate barcode scanning mode. Point your device camera or attached scanner at a product barcode — the item is added to the cart immediately without manual searching.
+
+<Tip>
+  Keep the barcode scanner active during a retail shift to serve customers
+  faster. The scanner icon is located in the top-right area of the menu
+  toolbar, represented by a QR code symbol.
+</Tip>
+
+## Cart Actions
+
+The cart panel supports several actions beyond simply adding items:
+
+<CardGroup cols={2}>
+  <Card title="Change Quantity" icon="plus-minus">
+    Use the **+** / **−** buttons on any line item to update the count. Set quantity to zero to remove the item, or tap the trash icon for a quicker removal.
+  </Card>
+  <Card title="Remove Items" icon="trash">
+    Tap the **delete** icon on a cart line to remove that item entirely from the order.
+  </Card>
+  <Card title="Order-Level Discount" icon="tag">
+    Tap **Add Discount** at the bottom of the cart to apply a percentage or fixed-amount discount to the entire order total.
+  </Card>
+  <Card title="Special Instructions" icon="note-sticky">
+    Add a note to any individual item (e.g., "Allergy: nuts") or to the overall order for the kitchen or cashier.
+  </Card>
+  <Card title="Split the Bill" icon="scissors">
+    Use the **Split** option to divide the order total across multiple customers or payment methods before proceeding to checkout.
+  </Card>
+  <Card title="Modifiers & Add-ons" icon="sliders">
+    Tap a line item to expand the modifier panel and select optional extras or variants configured for that product.
+  </Card>
+</CardGroup>
+
+## Managing Active Orders
+
+To review or continue working on an existing order, navigate to **Orders** → **Orders** tab. This list shows all active and completed orders for the current shift. You can:
+
+- **Filter by status** — open, completed, voided.
+- **Search by order number** or table name.
+- **Open an order** to add more items, apply discounts, or proceed to payment.
+- **View order history** including which staff member placed or last modified the order.
+
+<Note>
+  If your subscription plan includes bundle deals, a **Packages** tab appears
+  in the menu alongside the standard categories. Use it to add pre-configured
+  combo deals to the cart in a single tap.
+</Note>

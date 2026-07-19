@@ -1,47 +1,77 @@
 ---
-title: "Quickstart"
-description: "Begin with a guide on the fastest path to a successful outcome"
+title: "Get Started with BasePoint POS in Minutes"
+sidebarTitle: "Quickstart"
+description: "Set up your BasePoint POS account, configure your first shop, add products, and process your first order — all in under 15 minutes."
 ---
 
-Describe how someone begins using your product. What is the first thing they need to do? Are there any prerequisites?
-
-A quickstart should take someone from zero to using your product. They'll get a quick win and a sense of what they can accomplish.
-
-## Prerequisites
-
-Before you begin, you must have:
-
-- Requirement one (for example, Node.js 18+, a free account, an API key)
-- Requirement two (for example, a compatible device, a compatible browser, a compatible operating system)
-
-## Get started
+This guide walks you through everything you need to do between your very first login and your very first completed transaction. By the end, your shop profile will be configured, your product catalogue will have at least one item, your floor plan will have a table, and you'll have processed a real order through the POS. Follow each step in sequence — later steps depend on the setup done in earlier ones.
 
 <Steps>
-  <Step title="Install">
-    Describe how to install your product or sign up.
+  <Step title="Log In to BasePoint POS">
+    Open your browser and navigate to [https://hospitality.reliatech.co.ke](https://hospitality.reliatech.co.ke). Enter the email address and password you registered with, then click **Sign In**.
 
-    ```bash
-    npm install your-package
-    ```
+    <Note>
+      BasePoint POS is a Progressive Web App (PWA) optimised for **Google Chrome** and **Brave**. Using other browsers may result in missing features or layout issues. Always open the app in one of these two browsers for the best experience.
+    </Note>
+
+    Once you're signed in, you'll land on the main dashboard. Your role determines which modules and menu items are visible — if you're the account owner, you'll have full Admin access.
   </Step>
-  <Step title="Configure">
-    Describe any setup or configuration needed before first use.
 
-    ```bash
-    your-cli init
-    ```
+  <Step title="Complete Your Shop Profile">
+    Before you take any orders, give your shop its identity. Navigate to **Settings > System Setup** and open the **Profile** tab.
+
+    Fill in the following fields:
+
+    - **Shop Name** — the trading name displayed on receipts and the dashboard header.
+    - **Phone Number** — your primary business contact number.
+    - **Email Address** — used for system notifications and receipts.
+    - **Physical Address** — printed on customer receipts.
+    - **Logo** — upload a PNG or JPG file (recommended size: 300 × 300 px). Your logo appears on receipts and the login screen.
+
+    Click **Save Profile** when you're done.
   </Step>
-  <Step title="Run it">
-    Show the first thing a user does to see it working.
 
-    ```bash
-    your-cli start
-    ```
+  <Step title="Add Your First Product Category">
+    Products must belong to a category before they can appear on the POS menu. Navigate to **Settings > Category Settings** and click **Add Category**.
+
+    Enter a category name (for example, *Main Course*, *Beverages*, or *Electronics*), choose a display colour, and click **Save**. Repeat this step to create as many categories as you need before adding products.
+  </Step>
+
+  <Step title="Add Your First Product">
+    Navigate to **Store > Add Product**. Fill in the product details:
+
+    - **Product Name** — what appears on the POS menu and receipts.
+    - **Price** — the selling price inclusive of any applicable tax.
+    - **Category** — select the category you created in the previous step.
+    - **Image** *(optional)* — upload a photo to make the item easier to identify on the menu grid.
+
+    Click **Save Product**. The item immediately becomes available on the POS menu.
+
+    <Tip>
+      BasePoint POS supports barcode scanner input. If you stock retail products with barcodes, enter the barcode number in the **Barcode** field when adding a product. Staff can then scan the item at the counter instead of searching the menu manually — dramatically speeding up checkout.
+    </Tip>
+  </Step>
+
+  <Step title="Set Up a Table">
+    If your business uses table service, you need at least one table before you can create a dine-in order. Navigate to **Settings > Table Settings** and click **Add Floor** to create a floor (for example, *Ground Floor* or *Rooftop Terrace*). Then click **Add Table** within that floor, give the table a name or number, and set its cover capacity.
+
+    Click **Save**. Your table is now visible in the **Tables** view on the POS.
+  </Step>
+
+  <Step title="Take Your First Order">
+    You're ready to ring up your first sale. Navigate to the **Tables** view from the main menu. Find the table you just created and click on it to open the order screen.
+
+    1. Browse the menu grid and click any product to add it to the cart on the right.
+    2. Adjust quantities using the **+** and **−** buttons next to each line item.
+    3. Apply a discount or select a customer from Mteja CRM if needed.
+    4. Click **Checkout** to open the payment screen.
+    5. Select the payment method (Cash, M-Pesa, Card, or other configured methods) and confirm the amount.
+    6. Click **Process Payment**. A receipt is generated and the table is automatically marked as available again.
+
+    Congratulations — your first BasePoint POS order is complete.
   </Step>
 </Steps>
 
-<Tip>
-  Give people a way to get help. This could be a link to a support page, a chat with a customer support agent, or a forum for your product.
-
-  Example: Need help? Reach out to us at [support@yourcompany.com](mailto:support@yourcompany.com).
-</Tip>
+<Note>
+  When you open BasePoint POS in Chrome or Brave, the browser will display a prompt asking if you'd like to **install the app** on your device. Installing it creates a shortcut that opens BasePoint POS in a full-screen window without browser toolbars, giving your staff a cleaner, distraction-free experience. The installed PWA also caches key assets so the interface loads faster on subsequent visits.
+</Note>

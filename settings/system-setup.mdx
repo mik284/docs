@@ -1,0 +1,145 @@
+---
+title: "System Setup: Configure Your BasePoint POS Shop"
+sidebarTitle: "System Setup"
+description: "Use System Setup in BasePoint POS to configure your shop profile, payment details, printer, receipt appearance, notifications, and WhatsApp integration."
+---
+
+System Setup is the central configuration hub for your BasePoint POS shop. Everything from your business name and logo to your receipt footer, printer settings, and WhatsApp sender registration lives here. Work through each tab when you first set up your shop, and return whenever your business details or preferences change.
+
+<Warning>
+  Each tab in System Setup saves independently. Changes you make on one tab are **not** saved automatically when you switch to another tab. Click **Save** on every tab before navigating away to avoid losing your changes.
+</Warning>
+
+Navigate to **Settings > System Setup** to access the configuration tabs below.
+
+<Tabs>
+  <Tab title="Shop Profile">
+    Set your public-facing business identity. This information appears on receipts, customer communications, and your portal.
+
+    | Field | Description |
+    |---|---|
+    | **Business Name** | Your shop or restaurant name as it appears to customers |
+    | **Phone Number** | Primary contact number displayed on receipts |
+    | **Email Address** | Business email for customer correspondence |
+    | **Physical Address** | Street address shown on receipts and invoices |
+    | **Logo** | Upload your business logo (PNG or JPG, recommended 200×200 px) |
+    | **Color Scheme** | Choose your brand's primary color for the POS interface |
+
+    Click **Save Profile** after making changes.
+  </Tab>
+  <Tab title="Payment Details">
+    Enter the payment details your customers need to complete mobile money or bank transfers.
+
+    | Field | Description |
+    |---|---|
+    | **Paybill Number** | M-Pesa or mobile money paybill number |
+    | **Till Number** | Mobile money till/buy-goods number (if applicable) |
+    | **Account Name** | Business name as registered with the payment provider |
+
+    These details print on customer receipts when mobile money is selected as the payment method, making it easy for customers to verify their payment.
+  </Tab>
+  <Tab title="Bank Details">
+    Record your business bank account information for financial records and payment reconciliation.
+
+    | Field | Description |
+    |---|---|
+    | **Bank Name** | Name of your bank (e.g. KCB, Equity, Standard Chartered) |
+    | **Account Number** | Your business bank account number |
+    | **Branch** | Branch name or code |
+    | **Account Name** | Name on the bank account |
+
+    Bank details are used for internal financial reporting and can optionally be printed on invoices.
+  </Tab>
+  <Tab title="Printer Settings">
+    Connect and configure your receipt printer.
+
+    | Setting | Description |
+    |---|---|
+    | **Printer Name / Connection** | Select your connected printer from the dropdown |
+    | **Print Density** | Adjust ink density for thermal printers (Low / Medium / High) |
+    | **Paper Width** | Choose 58 mm or 80 mm to match your printer's paper roll |
+    | **Auto-Print on Payment** | When enabled, a receipt prints automatically every time a sale is completed |
+    | **Print Kitchen Ticket** | Automatically send a kitchen copy to a secondary printer on new orders |
+
+    <Tip>
+      Enable **Auto-Print on Payment** to speed up service — cashiers don't need to manually trigger receipts for every transaction.
+    </Tip>
+  </Tab>
+  <Tab title="Receipt Appearance">
+    Customize what appears on customer receipts.
+
+    | Field | Description |
+    |---|---|
+    | **Receipt Header** | Text printed at the top of every receipt (e.g. a welcome message or slogan) |
+    | **Receipt Footer** | Text printed at the bottom (e.g. "Thank you for your visit! Returns accepted within 7 days.") |
+    | **Show Logo** | Toggle your business logo on/off on printed receipts |
+    | **Show VAT/Tax Details** | Display itemized tax amounts on receipts |
+    | **Show Cashier Name** | Print the name of the staff member who processed the sale |
+    | **Show Order Number** | Include the internal order reference number |
+    | **Custom Fields** | Add up to two custom label/value pairs to the receipt |
+  </Tab>
+  <Tab title="Privacy Settings">
+    Control how customer data is stored and managed.
+
+    | Setting | Description |
+    |---|---|
+    | **Data Retention Period** | Number of days to retain transaction and customer records |
+    | **Customer Data Collection** | Choose whether to prompt for customer details on every sale |
+    | **Marketing Consent** | Require opt-in before adding customers to campaign lists |
+
+    <Info>
+      Review your data retention settings to ensure compliance with applicable data protection regulations in your country.
+    </Info>
+  </Tab>
+  <Tab title="Notification Settings">
+    Configure which automated email alerts BasePoint POS sends to you and your team.
+
+    | Notification | Trigger |
+    |---|---|
+    | **Daily Sales Summary** | Sent at end of business day with total revenue, transactions, and top items |
+    | **Low Stock Alert** | Triggered when a product's quantity falls below its reorder level |
+    | **New Order Notification** | Sent when a new order is placed (useful for online/delivery orders) |
+
+    Enter one or more recipient email addresses in the **Notification Recipients** field, separated by commas. All enabled notifications are sent to every address listed.
+  </Tab>
+  <Tab title="WhatsApp Registration">
+    Register a WhatsApp Business sender number to send receipts, order confirmations, and marketing messages to customers.
+
+    <Steps>
+      <Step title="Enter your business phone number">
+        Type the phone number you want to use as your WhatsApp sender. This must be a dedicated business number — it cannot be a number already active on a personal WhatsApp account.
+      </Step>
+      <Step title="Request the OTP">
+        Click **Send OTP**. WhatsApp sends a one-time verification code to the number via SMS or voice call.
+      </Step>
+      <Step title="Verify the number">
+        Enter the OTP in the verification field and click **Verify**.
+      </Step>
+      <Step title="Enable notification types">
+        Toggle on the message types you want to send via WhatsApp: receipts, order confirmations, and campaign messages.
+      </Step>
+      <Step title="Save">
+        Click **Save Registration**. Your WhatsApp sender is now active.
+      </Step>
+    </Steps>
+
+    <Warning>
+      The phone number you register cannot be an active personal WhatsApp account. Using a personal number will disconnect it from the WhatsApp app on that phone. Use a dedicated SIM for your business sender.
+    </Warning>
+  </Tab>
+  <Tab title="Hotel Settings">
+    <Info>
+      This tab is only visible when **Hotel Mode** is enabled for your account. Contact BasePoint POS support to activate hotel mode.
+    </Info>
+
+    Configure room and hospitality-specific settings for your hotel or lodge property:
+
+    | Setting | Description |
+    |---|---|
+    | **Room Configuration** | Define room numbers, types (standard, deluxe, suite), and capacities |
+    | **Check-In / Check-Out Times** | Set default times displayed to staff and on guest receipts |
+    | **Housekeeping Statuses** | Customize room status labels (e.g. Clean, Dirty, Inspected, Out of Order) |
+    | **Folio Billing** | Enable posting of restaurant and bar charges directly to a room folio |
+    | **Late Check-Out Fee** | Define automatic surcharge rules for late departures |
+  </Tab>
+</Tabs>

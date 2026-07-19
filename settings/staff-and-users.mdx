@@ -1,0 +1,116 @@
+---
+title: "Manage Staff Accounts, Roles, and Shifts"
+sidebarTitle: "Staff & Users"
+description: "Add staff members, assign roles with the right permissions, manage employee shifts, and track clock-in attendance in BasePoint POS."
+---
+
+Staff & Users is where you create and manage every person who works with BasePoint POS — from cashiers and waiters to managers and administrators. Give each team member their own account with the right level of access, schedule their shifts, track attendance, and manage leave requests from one central location.
+
+## Adding a Staff Member
+
+Create an account for each team member before they start using the POS.
+
+<Steps>
+  <Step title="Open Staff & Users">
+    Navigate to **Settings** in the left sidebar, then select **Staff & Users**.
+  </Step>
+  <Step title="Invite or add a user">
+    Click **Invite User** (to send an email invitation) or **Add User** (to create the account directly without an invitation).
+  </Step>
+  <Step title="Enter the staff member's details">
+    Fill in the user form:
+
+    - **Full Name** — the staff member's name as it appears on receipts and reports
+    - **Email Address** — used for login and system notifications
+    - **Phone Number** — optional; used for WhatsApp notifications if configured
+    - **Role** — the permission group that controls what this person can see and do (see [Managing Roles](#managing-roles) below)
+    - **Department** — the team or department this person belongs to (e.g. Kitchen, Front of House, Management)
+  </Step>
+  <Step title="Set a POS PIN (optional)">
+    Assign a 4- or 6-digit PIN for quick POS login. This allows the staff member to clock in and process sales on a shared terminal without typing a full email and password.
+  </Step>
+  <Step title="Save the account">
+    Click **Save**. If you used **Invite User**, the staff member receives an email with a link to set their password. If you used **Add User**, you can share the credentials directly.
+  </Step>
+</Steps>
+
+<Tip>
+  Use PINs on shared POS terminals so staff can quickly switch between users during busy periods. Each staff member taps their PIN, completes their transaction, and the next person can take over — no full logout/login required.
+</Tip>
+
+## Staff Login
+
+Staff members can authenticate at the POS in two ways:
+
+- **Email and password** — full login for admin access, settings changes, and report viewing
+- **Quick-access PIN** — fast entry from the POS lock screen for cashiers and floor staff who only need to process sales
+
+Encourage floor staff to always use their own PIN (not a shared login) so that sales are correctly attributed to the right person in reports and targets.
+
+## Managing Roles
+
+Roles define what a staff member can see and do inside BasePoint POS. Navigate to **Staff & Users > Roles** to view, create, and edit roles.
+
+Each role is a named permission set. You can create as many custom roles as your business needs. Common roles include:
+
+| Role | Typical Permissions |
+|---|---|
+| **Cashier** | Process sales, view own shift, print receipts |
+| **Waiter** | Take orders, view table status, no access to reports |
+| **Supervisor** | Everything a cashier can do, plus view end-of-day reports and apply discounts |
+| **Manager** | Full access except system configuration |
+| **Admin** | Unrestricted access to all settings and data |
+
+For a full breakdown of individual permissions, see [Roles & Permissions](/concepts/roles-permissions).
+
+## Employee Shifts
+
+Plan your team's working schedule using the Employee Shifts feature.
+
+1. Navigate to **Employee Shift** from the main menu (or via **Admin > Employee Shift**).
+2. Click **Create Shift** to set up a new schedule block.
+3. Assign the shift to a staff member and define the **start time**, **end time**, and **date(s)**.
+4. Repeat for all staff to build out your weekly or monthly roster.
+5. Switch between **Week View** and **Month View** using the calendar toggle to review your full schedule at a glance.
+
+Staff members can log in to the employee portal to view their own scheduled shifts.
+
+## Clock-In Tracking
+
+Monitor real-time attendance and actual hours worked.
+
+Navigate to **Admin > Staff Clock-In** to see:
+
+- Which staff are currently clocked in
+- Clock-in and clock-out timestamps for each shift
+- Late arrivals and early departures flagged automatically
+
+Staff clock in and out directly from the POS interface. The clock-in button appears on the POS home screen when a staff member authenticates.
+
+To review attendance history, apply the date range filter and optionally filter by staff member. Export the data to CSV for payroll processing.
+
+## Leave Management
+
+Give your team a self-service leave portal while keeping managers in control of approvals.
+
+**For staff:** Staff log in to the **Staff Leave Portal** to submit a leave request. They select the leave type (annual leave, sick leave, emergency leave), specify the dates, and add a note for context.
+
+**For managers:** Open **Admin > Staff Leave** to see all pending requests. Approve or reject each request with a single click. Approved leave automatically updates the shift calendar to show the staff member as unavailable.
+
+<Accordion title="How do I set up leave balances?">
+  Navigate to **Staff & Users > Leave Balance Setup** to define the number of days each leave type provides per year (e.g. 21 days annual leave, 10 days sick leave). Balances are tracked per staff member and decrement automatically as leave requests are approved.
+</Accordion>
+
+## Wages
+
+Record and manage staff wage payments from **Admin > Wages**:
+
+- Add a wage record for each pay period (weekly, bi-weekly, or monthly)
+- Mark payments as Pending, Processing, or Paid
+- View a summary of total wage spend by staff member and period
+
+Export wage records to CSV for your accountant or payroll software.
+
+<Info>
+  If your subscription includes the **Bandu Payroll** module, payroll processing is handled in the Bandu section with full integration to shift hours and leave records.
+</Info>

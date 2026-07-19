@@ -1,0 +1,129 @@
+{
+  "projectType": "saas",
+  "projectName": "BasePoint POS",
+  "projectDescription": "A cloud-based, multi-module point-of-sale and business management platform for hospitality, retail, and food service businesses — featuring POS, accounting, CRM, HR, and real estate modules.",
+  "theme": "almond",
+  "primaryColor": "#0c6df6",
+  "lightColor": "#7cb4e7",
+  "darkColor": "#040404",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "quickstart",
+              "account-setup"
+            ]
+          },
+          {
+            "group": "Core Concepts",
+            "pages": [
+              "concepts/modules",
+              "concepts/roles-permissions",
+              "concepts/multi-shop"
+            ]
+          },
+          {
+            "group": "POS & Orders",
+            "pages": [
+              "pos/tables-and-floors",
+              "pos/taking-orders",
+              "pos/payments",
+              "pos/receipts-and-printing"
+            ]
+          },
+          {
+            "group": "Inventory & Products",
+            "pages": [
+              "inventory/products-and-categories",
+              "inventory/stock-management",
+              "inventory/suppliers"
+            ]
+          },
+          {
+            "group": "Accounting",
+            "pages": [
+              "accounting/overview",
+              "accounting/chart-of-accounts",
+              "accounting/journal-entries",
+              "accounting/bank-reconciliation",
+              "accounting/expenses-and-income"
+            ]
+          },
+          {
+            "group": "CRM",
+            "pages": [
+              "crm/leads",
+              "crm/campaigns",
+              "crm/sales-targets"
+            ]
+          },
+          {
+            "group": "Settings & Configuration",
+            "pages": [
+              "settings/system-setup",
+              "settings/payment-methods",
+              "settings/staff-and-users",
+              "settings/notifications",
+              "settings/omnichannel"
+            ]
+          },
+          {
+            "group": "Reports & Analytics",
+            "pages": [
+              "reports/sales-reports",
+              "reports/staff-analytics"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Multi-table floor plan management with real-time order tracking",
+    "Multi-shop / multi-location support under a single admin dashboard",
+    "Modular architecture: POS (Duka), Accounting (Pesa), CRM (Mteja), HR (Bandu), Real Estate (Dala)",
+    "Role-based access control with granular permissions",
+    "Integrated accounting: chart of accounts, journal entries, bank reconciliation",
+    "Omnichannel inbox: WhatsApp, Messenger, and Instagram conversations",
+    "Inventory management with supplier purchase orders and stock transfers",
+    "Employee shift scheduling, clock-in tracking, and wage management",
+    "Thermal receipt printing with customizable receipt appearance",
+    "CRM: leads, campaigns, sales targets, and sales budgets",
+    "Real-time sales reports, top sellers, and analytics dashboards",
+    "Subscription and billing management",
+    "DigiTax integration for tax invoice generation",
+    "Progressive Web App (PWA) with offline-capable service worker"
+  ],
+  "publicApiSurface": [
+    "GET/POST /tables — manage floor tables and seating areas",
+    "GET/POST /orders — create and manage customer orders",
+    "GET/POST /cart — shopping cart operations",
+    "GET/POST /products — product catalog management",
+    "GET/POST /categories — product category management",
+    "GET/POST /inventory — stock tracking and adjustments",
+    "GET/POST /suppliers — supplier management",
+    "GET/POST /customers — customer records",
+    "GET/POST /users — staff user management",
+    "GET/POST /roles — role and permission management",
+    "GET/POST /accounting/accounts — chart of accounts",
+    "GET/POST /accounting/journals — journal entries",
+    "GET/POST /accounting/bank-statements — bank statement upload",
+    "GET/POST /accounting/reconciliation — bank reconciliation",
+    "GET/POST /crm/leads — CRM lead management",
+    "GET/POST /crm/campaigns — marketing campaigns",
+    "GET/POST /dala/properties — real estate property management",
+    "GET/POST /dala/leases — lease management",
+    "GET/POST /dala/rent-collection — rent collection records",
+    "GET/POST /reports — sales and analytics reports",
+    "GET/POST /shifts — employee shift management",
+    "GET /shops — multi-shop listing",
+    "GET/POST /payment-methods — configure payment methods",
+    "GET/POST /notifications — notification settings and alerts",
+    "GET/POST /omnichannel/conversations — WhatsApp/Messenger/Instagram inbox"
+  ]
+}
