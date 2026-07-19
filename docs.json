@@ -1,11 +1,14 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "name": "BasePoint POS",
-  "theme": "almond",
-  "favicon": "/favicon.svg",
+  "name": "BasePoint",
+  "theme": "mint",
+  "favicon": {
+    "light": "/images/Insignia(Black)5hdpi.png",
+    "dark": "/images/Insignia(Color)1ldpi.png"
+  },
   "colors": {
-    "primary": "#0c6df6",
-    "light": "#7cb4e7",
+    "primary": "#03bb5f",
+    "light": "#02830a",
     "dark": "#040404"
   },
   "navbar": {
@@ -90,5 +93,20 @@
         ]
       }
     ]
+  },
+  "logo": {
+    "light": "/images/Wordmark+Tagline(Black).svg",
+    "dark": "/images/OutlineWordmark+Tagline(Color).svg",
+    "href": "https://basepoint.co.ke"
+  },
+  "thumbnails": {
+    "background": "/images/OutlineWordmark+Tagline(Color)4hdpi.png"
+  },
+  "description": "The Foundation of African Trade. Built on Base.\nManage sales, inventory, accounting, and payments from a single, unified dashboard built specifically for African businesses to scale effortlessly.",
+  "icons": {
+    "library": "lucide"
+  },
+  "background": {
+    "decoration": "gradient"
   }
 }
