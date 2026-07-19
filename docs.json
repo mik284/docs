@@ -95,8 +95,8 @@
     ]
   },
   "logo": {
-    "light": "/images/Wordmark+Tagline(Black).svg",
-    "dark": "/images/OutlineWordmark+Tagline(Color).svg",
+    "light": "/favicon.svg",
+    "dark": "/favicon.svg",
     "href": "https://basepoint.co.ke"
   },
   "thumbnails": {
