@@ -1,74 +1,68 @@
 ---
-title: "Set Up Alerts and Notifications in BasePoint POS"
+title: "Set Up Automated Alerts and Notifications in BasePoint POS"
 sidebarTitle: "Notifications"
-description: "Configure email and WhatsApp alerts for low stock, daily sales summaries, new orders, and customer messages in BasePoint POS."
+description: "Configure email and WhatsApp notification channels in BasePoint POS to keep customers informed with receipts, order confirmations, and business messages."
 ---
 
-Notifications keep you and your team informed of important business events without requiring anyone to be actively looking at the screen. Whether it's a low-stock warning that prevents a menu item from running out, a daily sales summary landing in your inbox each evening, or a WhatsApp receipt sent automatically to a customer — BasePoint POS notifications run quietly in the background so your business runs smoothly.
+Notifications let BasePoint POS automatically send messages to your customers — such as receipts and order confirmations — through the channels you choose. You can enable email, WhatsApp, or both, and control whether WhatsApp messages are sent in sandbox (testing) or production (live) mode.
 
-## Email Notifications
+## Notification Channels
 
-Configure email alerts in **Settings > System Setup > Notification Settings**.
+Configure notification delivery in **Settings > System Setup > Notification Settings**.
 
-The following notification types are available:
+Two delivery channels are available:
 
 <CardGroup cols={2}>
-  <Card title="Daily Sales Summary" icon="chart-line">
-    Sent at the end of each business day. Includes total revenue, number of transactions, average order value, and top-selling items.
+  <Card title="Email" icon="envelope" href="/settings/system-setup">
+    Send automated messages to customers via email. Toggle this on to enable email delivery.
   </Card>
-  <Card title="Low Stock Alert" icon="triangle-alert">
-    Triggered automatically when any product's quantity drops below its configured reorder level. Helps you reorder before you run out.
-  </Card>
-  <Card title="New Order Notification" icon="bell">
-    Fires when a new order is placed — especially useful for online orders and delivery orders that arrive when the POS screen isn't being monitored.
-  </Card>
-  <Card title="Custom Alerts" icon="settings">
-    Additional alert types may be available depending on your plan and enabled modules.
+  <Card title="WhatsApp" icon="message-circle" href="/settings/system-setup">
+    Send automated messages via WhatsApp. Requires a registered WhatsApp Business sender number. See [WhatsApp Registration](/settings/system-setup) to set up your sender.
   </Card>
 </CardGroup>
 
-**Setting up email recipients:**
+**To configure notification channels:**
 
 1. Navigate to **Settings > System Setup**.
 2. Open the **Notification Settings** tab.
-3. Toggle on the notification types you want to receive.
-4. Enter recipient email addresses in the **Notification Recipients** field.
-5. Separate multiple addresses with commas (e.g. `manager@mybiz.com, owner@mybiz.com`).
-6. Click **Save**.
-
-All enabled notification types are sent to every email address in the recipients list.
-
-## WhatsApp Notifications
-
-Send automated WhatsApp messages to your customers — receipts, order confirmations, and promotional campaigns — through a registered WhatsApp Business sender.
+3. Toggle on the channels you want to use (**Email**, **WhatsApp**, or both).
+4. Click **Save Changes**.
 
 <Note>
-  WhatsApp notifications require a dedicated business phone number. You cannot use a personal number that is already active on the WhatsApp app. The registration process will disconnect that number from the standard WhatsApp application.
+  If you enable WhatsApp without a registered sender, you will be prompted to complete WhatsApp Registration before messages can be sent.
 </Note>
+
+## WhatsApp Mode
+
+When WhatsApp is enabled, you must choose an operating mode:
+
+| Mode | Description |
+|---|---|
+| **Sandbox** | For testing only. Messages are routed through a shared Twilio test number. Recipients must first opt in to the sandbox by sending a join message to the test number before they can receive messages. |
+| **Production** | Live messaging using your verified WhatsApp Business number. Use this once your sender registration is complete and you are ready to communicate with real customers. |
+
+To switch modes, open **Settings > System Setup > Notification Settings**, select the desired mode under **WhatsApp Mode Configuration**, and click **Save Changes**.
+
+## WhatsApp Sender Registration
+
+Before enabling WhatsApp notifications in production, register your business phone number as a WhatsApp sender:
 
 <Steps>
   <Step title="Open WhatsApp Registration">
     Navigate to **Settings > System Setup**, then open the **WhatsApp Registration** tab.
   </Step>
-  <Step title="Enter your business phone number">
-    Type the phone number you want to register as your WhatsApp Business sender, including the country code (e.g. +254 700 000000).
+  <Step title="Enter your business details">
+    Type your phone number in international format (e.g. +254712345678) and fill in your business name and optional details.
   </Step>
-  <Step title="Verify via OTP">
-    Click **Send OTP**. You will receive a one-time password via SMS or voice call to the number you entered. Enter the OTP in the verification field and click **Verify**.
+  <Step title="Submit and verify">
+    Click **Register WhatsApp Sender**. Once the system processes your number, a 6-digit OTP is sent to the registered phone via WhatsApp. Enter it and click **Verify OTP**.
   </Step>
-  <Step title="Enable notification types">
-    Toggle on the message types you want to send via WhatsApp:
-
-    - **Order Confirmations** — sent to the customer when an order is placed
-    - **Receipts** — sent after a payment is completed
-    - **Campaign Messages** — bulk promotional messages sent via CRM Campaigns
-  </Step>
-  <Step title="Save the registration">
-    Click **Save Registration**. Your WhatsApp sender is now live and ready to send messages.
+  <Step title="Set mode to Production">
+    Return to the **Notification Settings** tab, set the WhatsApp mode to **Production**, and click **Save Changes**.
   </Step>
 </Steps>
 
-Once registered, any customer who provides their WhatsApp-registered phone number at checkout will automatically receive the notification types you've enabled.
+Once registered, customers who provide a WhatsApp-enabled phone number at checkout will automatically receive messages through the channels you have enabled.
 
 ## In-App Notifications
 
@@ -76,10 +70,10 @@ BasePoint POS also surfaces notifications directly inside the application:
 
 - The **bell icon** in the top navigation bar shows a badge count of unread notifications.
 - Click the bell to see a quick preview of recent alerts.
-- Select **View All Notifications** (or navigate to the **Notifications** page) to see the complete history of all notifications, filter by type, and mark items as read.
+- Select **View All Notifications** to see the complete history, filter by type, and mark items as read.
 
-In-app notifications include system alerts, approval requests (such as pending leave requests), and activity summaries that are relevant to the currently logged-in user's role.
+In-app notifications include system alerts, approval requests (such as pending staff leave requests), and activity summaries relevant to the currently logged-in user's role.
 
 <Tip>
-  If you manage multiple shops, set up the daily sales summary for each location and send it to a shared management email group. You'll have a consolidated view of performance every morning without logging into each shop.
+  Use Production mode for all customer-facing messaging. Reserve Sandbox mode for internal testing before launching a new notification workflow to customers.
 </Tip>

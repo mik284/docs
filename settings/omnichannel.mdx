@@ -1,10 +1,10 @@
 ---
-title: "Connect WhatsApp, Messenger, and Instagram Inbox"
+title: "Connect WhatsApp, Messenger, and Instagram to Your Inbox"
 sidebarTitle: "Omnichannel"
 description: "Manage WhatsApp, Facebook Messenger, and Instagram customer conversations from a single inbox in BasePoint POS using the Omnichannel integration."
 ---
 
-The Omnichannel Inbox consolidates customer messages from WhatsApp, Facebook Messenger, and Instagram into a single, unified view inside BasePoint POS. Instead of switching between three different apps to respond to customers, your team handles every conversation in one place — with filters, assignment tools, and status tracking built in.
+The Omnichannel Inbox consolidates customer messages from WhatsApp, Facebook Messenger, and Instagram into a single, unified view inside BasePoint POS. Instead of switching between three different apps to respond to customers, your team handles every conversation in one place — with channel filters, assignment tools, and status tracking built in.
 
 <Note>
   Access to the Omnichannel Inbox requires the `OMNICHANNEL_VIEW` permission on the logged-in user's role. Ensure this permission is enabled for the relevant staff roles under **Settings > Staff & Users > Roles**.
@@ -17,20 +17,17 @@ Connect each messaging channel once, and all incoming conversations flow into th
 <Tabs>
   <Tab title="WhatsApp">
     <Steps>
-      <Step title="Open the Omnichannel settings">
-        Navigate to **Settings > Omnichannel**, or go to the **Omnichannel** page in the main navigation and click **Connect Channel**.
+      <Step title="Open the channel connection screen">
+        Navigate to the **Omnichannel** page in the main navigation and click **Connect Channel**.
       </Step>
       <Step title="Select WhatsApp">
         Choose **WhatsApp** from the list of available channels.
       </Step>
-      <Step title="Authenticate with Meta">
-        Click **Connect via Facebook / Meta**. You are redirected to the Meta OAuth flow. Log in with the Facebook account that manages your WhatsApp Business account and grant the requested permissions.
+      <Step title="Log in with Facebook / Meta">
+        Click **Connect via Facebook / Meta**. A browser popup opens where you log in with the Facebook account that manages your WhatsApp Business account and grant the requested permissions.
       </Step>
       <Step title="Select your WhatsApp Business account">
         Choose the WhatsApp Business Account and the specific phone number you want to connect.
-      </Step>
-      <Step title="Assign to staff">
-        Optionally assign the channel to a default staff member who handles WhatsApp inquiries. Individual conversations can be reassigned later.
       </Step>
       <Step title="Confirm the connection">
         Click **Finish**. WhatsApp is now connected and messages will appear in the Omnichannel Inbox.
@@ -39,39 +36,39 @@ Connect each messaging channel once, and all incoming conversations flow into th
   </Tab>
   <Tab title="Facebook Messenger">
     <Steps>
-      <Step title="Open the Omnichannel settings">
-        Navigate to **Settings > Omnichannel** and click **Connect Channel**.
+      <Step title="Open the channel connection screen">
+        Navigate to the **Omnichannel** page and click **Connect Channel**.
       </Step>
       <Step title="Select Messenger">
         Choose **Facebook Messenger** from the channel list.
       </Step>
-      <Step title="Authenticate with Meta">
-        Click **Connect via Facebook**. Log in with the Facebook account that manages your Business Page and approve the requested permissions.
+      <Step title="Log in with Facebook">
+        Click **Connect via Facebook**. A browser popup opens where you log in with the Facebook account that manages your Business Page and approve the requested permissions.
       </Step>
       <Step title="Select your Page">
         Choose the Facebook Page whose Messenger inbox you want to connect.
       </Step>
-      <Step title="Assign and confirm">
-        Assign a default staff handler, then click **Finish**.
+      <Step title="Confirm the connection">
+        Click **Finish**. Messenger is now connected and messages will appear in the inbox.
       </Step>
     </Steps>
   </Tab>
   <Tab title="Instagram">
     <Steps>
-      <Step title="Open the Omnichannel settings">
-        Navigate to **Settings > Omnichannel** and click **Connect Channel**.
+      <Step title="Open the channel connection screen">
+        Navigate to the **Omnichannel** page and click **Connect Channel**.
       </Step>
       <Step title="Select Instagram">
         Choose **Instagram** from the channel list.
       </Step>
-      <Step title="Authenticate with Meta">
-        Click **Connect via Facebook / Instagram**. Log in and grant the permissions for your Instagram Business account.
+      <Step title="Log in with Facebook / Instagram">
+        Click **Connect via Facebook / Instagram**. A browser popup opens where you log in and grant permissions for your Instagram Business account.
       </Step>
       <Step title="Select your Instagram account">
         Pick the Instagram Business account you want to link. It must be connected to a Facebook Page.
       </Step>
-      <Step title="Assign and confirm">
-        Assign a default staff handler, then click **Finish**.
+      <Step title="Confirm the connection">
+        Click **Finish**. Instagram is now connected and Direct Messages will appear in the inbox.
       </Step>
     </Steps>
 
@@ -93,16 +90,16 @@ Each conversation row shows the customer name (or number), the channel icon, the
 ## Conversation Statuses
 
 <CardGroup cols={2}>
-  <Card title="Open" icon="message-circle">
+  <Card title="Open" icon="message-circle" href="/settings/omnichannel">
     The conversation is active and requires a response. New inbound messages automatically set a conversation to Open.
   </Card>
-  <Card title="Pending" icon="clock">
+  <Card title="Pending" icon="clock" href="/settings/omnichannel">
     A reply has been sent and the conversation is waiting for the customer to respond.
   </Card>
-  <Card title="Resolved" icon="check-circle">
+  <Card title="Resolved" icon="circle-check" href="/settings/omnichannel">
     The customer's issue has been addressed and the conversation is marked as complete. Resolved conversations can be reopened if the customer replies.
   </Card>
-  <Card title="Closed" icon="archive">
+  <Card title="Closed" icon="archive" href="/settings/omnichannel">
     The conversation is archived. Closed conversations are no longer visible in the active inbox but remain in history.
   </Card>
 </CardGroup>
@@ -114,7 +111,7 @@ Each conversation row shows the customer name (or number), the channel icon, the
 3. Type your reply in the message box at the bottom of the panel.
 4. Press **Enter** or click **Send**.
 
-Replies support plain text and emoji. For WhatsApp, you can also send quick-reply buttons if your WhatsApp Business template supports them.
+Replies support plain text and emoji.
 
 ## Assigning Conversations
 
@@ -125,8 +122,8 @@ Distribute workload across your team by assigning conversations to specific staf
 3. Select the staff member from the dropdown.
 4. The conversation moves to that staff member's assigned queue.
 
-Staff members only see conversations assigned to them (or unassigned conversations, depending on their role permissions). Managers with the full Omnichannel permission see all conversations across all channels.
+Staff members see conversations assigned to them and unassigned conversations, depending on their role permissions. Managers with the full Omnichannel permission see all conversations across all channels.
 
 <Tip>
-  Set up a WhatsApp away message in your **WhatsApp Business profile** (via the WhatsApp Business app) to automatically tell customers your opening hours when they message outside of business hours. This reduces frustration while your inbox is unmonitored.
+  Use the channel and status filters together — for example, filtering to WhatsApp + Open — to give each team member a focused queue of conversations to work through during their shift.
 </Tip>

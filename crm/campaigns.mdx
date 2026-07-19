@@ -1,13 +1,13 @@
 ---
-title: "Create and Track Marketing Campaigns in Mteja CRM"
+title: "Create and Track Marketing Campaigns in BasePoint POS"
 sidebarTitle: "Campaigns"
-description: "Run targeted marketing campaigns in BasePoint POS Mteja CRM. Set a budget, define your audience, send messages, and track responses and conversions."
+description: "Run targeted marketing campaigns in BasePoint POS Mteja CRM. Set a budget, define your audience, track leads and conversions, and measure revenue ROI."
 ---
 
-The Campaigns feature in Mteja CRM lets you send targeted messages to your customer base and measure the results. Whether you're promoting a seasonal offer, announcing a new menu, or re-engaging dormant customers, campaigns let you reach the right audience through the right channel — and track every response, lead, and sale that follows.
+The Campaigns feature in Mteja CRM lets you plan, execute, and measure targeted marketing activity across any channel — from email newsletters and SMS blasts to events, referral programmes, social media pushes, and more. Every campaign records its own budget, actual spend, leads generated, conversions, and revenue so you can see exactly which activities drive sales.
 
 <Note>
-  WhatsApp campaigns require your WhatsApp sender number to be registered in **System Setup > WhatsApp Registration** before you can launch. See [Notifications](/settings/notifications) for setup steps.
+  The Mteja CRM module must be enabled on your BasePoint POS subscription before Campaigns appear in your navigation. Contact your account manager or visit your plan settings to activate it.
 </Note>
 
 ## Creating a Campaign
@@ -22,56 +22,92 @@ The Campaigns feature in Mteja CRM lets you send targeted messages to your custo
   <Step title="Configure your campaign">
     Fill in the campaign details:
 
-    - **Campaign Name** — a descriptive internal name (e.g. "March Happy Hour Promo")
-    - **Type** — the delivery channel: **WhatsApp**, **Email**, or **SMS**
-    - **Target Audience** — choose who receives the message:
-      - *All Customers* — your entire customer database
-      - *Filtered Segment* — apply filters such as last visit date, total spend, location, or customer tag
-    - **Message Content** — the body of your message. Use template variables (see tip below) to personalize each message.
+    - **Campaign Name** — a descriptive internal name (e.g. "April SMS Blast")
+    - **Type** — the marketing channel (see [Campaign Types](#campaign-types) below)
+    - **Status** — the starting state; new campaigns default to **Draft**
+    - **Start Date / End Date** — the campaign's active window
+    - **Budget** — the planned spend in KES, used to calculate ROI
+    - **Target Leads** — optional lead-count goal for the campaign
+    - **Target Revenue** — optional revenue goal in KES
+    - **Department** — optionally scope the campaign to a specific department
+    - **Target Audience** — a free-text description of who you are targeting (e.g. "Existing customers aged 25–40")
+    - **Tags** — comma-separated labels for filtering and reporting (e.g. "seasonal, promo")
+    - **Description** — any additional notes about the campaign's goals or approach
   </Step>
-  <Step title="Set the schedule and budget">
-    - **Start Date** — when the campaign launches
-    - **End Date** — when the campaign closes (optional for one-time sends)
-    - **Budget** — the planned spend for this campaign, used to calculate ROI in reporting
-  </Step>
-  <Step title="Launch the campaign">
-    Review all settings, then click **Launch**. BasePoint POS queues the messages for delivery. You can monitor progress from the Campaigns dashboard immediately after launch.
+  <Step title="Save the campaign">
+    Click **Create Campaign**. The campaign is saved in **Draft** status. Update the status to **Scheduled** or **Active** when you are ready to begin.
   </Step>
 </Steps>
 
 <Tip>
-  Personalize every message using template variables such as `{{customer_name}}`, `{{shop_name}}`, and `{{promo_code}}`. A message that begins with "Hi Sarah, …" consistently outperforms a generic broadcast. Enter variables in double curly braces exactly as shown in the template editor.
+  Use **Tags** consistently across campaigns (e.g. "Q2", "upsell", "loyalty") so you can filter and compare related campaigns in the list view at a glance.
 </Tip>
 
 ## Campaign Types
 
+BasePoint POS supports a broad range of marketing channel types so you can record every kind of campaign activity in one place:
+
 <CardGroup cols={3}>
-  <Card title="WhatsApp Bulk Message" icon="message-circle">
-    Send a rich-text or media message directly to customers' WhatsApp numbers. Requires a registered WhatsApp Business sender. Ideal for high-open-rate promotions and order follow-ups.
+  <Card title="Email" icon="mail" href="/crm/campaigns">
+    Email newsletters and promotional messages sent to your customer list.
   </Card>
-  <Card title="Email Newsletter" icon="mail">
-    Deliver a formatted email to your customers' inboxes. Best for detailed announcements, menus, event invitations, and newsletters where longer content works well.
+  <Card title="SMS" icon="smartphone" href="/crm/campaigns">
+    Short plain-text messages sent to customers' mobile numbers. High deliverability for flash sales and reminders.
   </Card>
-  <Card title="SMS Blast" icon="smartphone">
-    Send a short plain-text message to customers' mobile numbers. High deliverability even without a smartphone. Great for flash sales, reminders, and time-sensitive alerts.
+  <Card title="Social Media" icon="share-2" href="/crm/campaigns">
+    Organic or paid posts on platforms such as Facebook, Instagram, or X.
+  </Card>
+  <Card title="Google Ads" icon="search" href="/crm/campaigns">
+    Paid search and display advertising through Google.
+  </Card>
+  <Card title="Referral" icon="users" href="/crm/campaigns">
+    Structured referral programmes that incentivise existing customers to bring in new ones.
+  </Card>
+  <Card title="Event" icon="calendar" href="/crm/campaigns">
+    In-person or online events such as tastings, launches, or promotions.
+  </Card>
+  <Card title="Flyer" icon="file-text" href="/crm/campaigns">
+    Printed or digital flyers distributed in-store or in the local area.
+  </Card>
+  <Card title="Radio" icon="radio" href="/crm/campaigns">
+    Radio advertisements or sponsorships.
+  </Card>
+  <Card title="TV" icon="tv" href="/crm/campaigns">
+    Television advertisements or sponsorships.
+  </Card>
+  <Card title="Other" icon="more-horizontal" href="/crm/campaigns">
+    Any campaign type not covered by the categories above.
   </Card>
 </CardGroup>
 
+## Campaign Statuses
+
+A campaign moves through a lifecycle as you work on it:
+
+| Status | Meaning |
+|---|---|
+| **Draft** | Being prepared; not yet active |
+| **Scheduled** | Approved and queued to start on the set start date |
+| **Active** | Currently running |
+| **Paused** | Temporarily stopped; can be resumed |
+| **Completed** | Finished and closed for reporting |
+| **Cancelled** | Abandoned before completion |
+
 ## Tracking Results
 
-After a campaign launches, the Campaigns dashboard updates in real time with performance metrics. Click any campaign row to view its full report:
+Click any campaign row in the list to open its detail panel. The panel shows real-time performance metrics updated as you record actuals:
 
 | Metric | Description |
 |---|---|
-| **Messages Sent** | Total number of messages dispatched |
-| **Delivered** | Messages confirmed as delivered to recipients |
-| **Opened** | Messages opened or read (WhatsApp read receipts / email open tracking) |
-| **Responded** | Recipients who replied or clicked a link |
-| **Leads Generated** | New CRM leads created as a result of campaign responses |
-| **Revenue Attributed** | Sales linked to customers who received this campaign |
+| **Budget** | Planned spend set at campaign creation |
+| **Spend** | Actual amount spent so far |
+| **Leads** | Number of leads generated by this campaign |
+| **Conversions** | Leads that converted to paying customers |
+| **Revenue** | Actual revenue attributed to this campaign |
+| **ROI** | `(Revenue − Spend) ÷ Spend × 100`, calculated automatically |
 
-Use the **Revenue Attributed** metric to calculate your campaign ROI against the budget you set at creation.
+The detail panel also shows a **Lead Pipeline Breakdown** (how campaign leads are distributed across pipeline stages) and any **Sales Targets** or **Sales Budgets** linked to this campaign.
 
-<Accordion title="Why do delivered and opened counts differ?">
-  Delivery confirms the message reached the recipient's device or inbox. Opens are tracked separately — for WhatsApp this uses read receipts (blue ticks), and for email it uses a tracking pixel. Recipients who have read receipts disabled or email image loading blocked will show as delivered but not opened. This is normal and expected.
+<Accordion title="How do I update actual spend and revenue?">
+  Actual spend, leads, conversions, and revenue are updated manually or through linked sales targets and budgets. Open the campaign, click **Edit Campaign**, and update the actuals fields. You can also link a Sales Target or Sales Budget to this campaign from the Sales Targets and Sales Budgets pages — those records will then appear inside the campaign detail panel automatically.
 </Accordion>

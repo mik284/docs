@@ -1,10 +1,10 @@
 ---
-title: "Manage Multiple Shop Locations in BasePoint POS"
+title: "Multi-Shop Management in BasePoint POS: Full Guide"
 sidebarTitle: "Multi-Shop"
 description: "Run multiple restaurant or retail locations under one BasePoint POS account. Each shop has its own menu, staff, tables, and reports."
 ---
 
-BasePoint POS is built for businesses that operate across more than one physical location. Under a single admin account you can create and manage as many shop locations as your plan allows — each one behaves as an independent operation with its own product catalogue, tables, staff assignments, payment methods, and reporting data. At the same time, everything rolls up into one admin dashboard so you always have a cross-location view without logging in and out of separate accounts.
+BasePoint POS is built for businesses that operate across more than one physical location. Under a single admin account you can create and manage multiple shop locations — each one behaves as an independent operation with its own product catalogue, tables, staff assignments, payment methods, and reporting data. At the same time, everything rolls up into one admin dashboard so you always have a cross-location view without logging in and out of separate accounts.
 
 ## How Multi-Shop Works
 
@@ -22,18 +22,14 @@ Each shop maintains its own:
 All shops share the **same admin dashboard**, so an Admin or Manager can see every location from one login.
 
 <Note>
-  Reports in the **Admin Dashboard** aggregate or allow filtering across all shops, giving you cross-location revenue, order volume, and inventory visibility. Reports accessed from within an individual shop's workspace (via `/store`, `/tables`, or `/accounting`) are scoped to that shop only. Make sure your staff understand which view they're looking at before drawing business conclusions from report data.
+  Reports in the **Admin Dashboard** aggregate or allow filtering across all shops, giving you cross-location revenue, order volume, and inventory visibility. Reports accessed from within an individual shop's workspace are scoped to that shop only. Make sure your staff understand which view they're looking at before drawing business conclusions from report data.
 </Note>
 
 ## Switching Between Shops
 
-The shop switcher lives in the **top navigation bar** of the admin dashboard. Clicking it shows a list of all shops on your account. Selecting a shop reloads the workspace into that shop's context — the URL, data, and available settings all update to reflect the selected location.
+The shop switcher lives in the **top navigation bar** of the admin dashboard. Clicking it shows a list of all shops on your account. Selecting a shop reloads the workspace into that shop's context — the data and available settings all update to reflect the selected location.
 
-From the admin dashboard you can also click **Open Shop** on any shop card to jump directly into its POS or module workspace. Where "Open Shop" takes you depends on which modules are active:
-
-- **POS enabled** → opens the Tables view (`/tables`) for that shop
-- **Accounting only** → opens the Accounting dashboard (`/accounting`)
-- **CRM only** → opens the Mteja workspace (`/mteja`)
+From the admin dashboard you can also click **Open Shop** on any shop card to jump directly into its POS or module workspace. Where **Open Shop** takes you depends on which modules are active for your account — you'll land on the most relevant workspace for your configuration.
 
 <Tip>
   If you manage several locations and need to identify them at a glance, ask your administrator to use distinct shop names that include the location — for example, "Garden City Branch" or "Westlands Outlet". The shop name appears in the switcher, on printed receipts, and in report headers, making it easy for staff to confirm they're working in the right location.
@@ -67,30 +63,25 @@ From the admin dashboard you can also click **Open Shop** on any shop card to ju
   </Step>
 </Steps>
 
-## Admin vs Shop-Level Access
+## Admin Dashboard vs Shop Workspace
 
-BasePoint POS separates **admin-level routes** from **shop-level routes**, and the distinction matters for both data visibility and permissions.
+BasePoint POS separates the **admin dashboard** from individual **shop workspaces**, and the distinction matters for both data visibility and permissions.
 
-### Admin-Level Routes (`/admin/...`)
+### Admin Dashboard
 
-Admin routes give you a **cross-shop view** of your entire account. From the admin dashboard you can:
+The admin dashboard gives you a **cross-shop view** of your entire account. From here you can:
 
 - View all shops and their summary metrics in one place
 - See a map of all shop locations (shops with GPS coordinates are plotted on Google Maps)
 - Manage users and roles that apply across locations
-- Access system-level settings, tenant configuration, and module toggles
+- Access system-level settings and module configuration
 - Compare revenue and order data across locations
 
-Only users with the **Admin** or **Manager** role (or a custom role with the relevant permissions) can access admin-level routes.
+Only users with the **Admin** role (or a custom role with the relevant permissions) can access admin dashboard features.
 
-### Shop-Level Routes (`/tables`, `/store`, `/accounting`, etc.)
+### Shop Workspace
 
-Shop-level routes are **scoped to the currently selected shop**. When a staff member opens a shop:
-
-- The **Tables** screen (`/tables`) shows only the tables for that location
-- The **Store** screen (`/store`) shows only that shop's products and active carts
-- The **Accounting** screen (`/accounting`) shows financial data for that shop's tenant context
-- **Reports** reflect only that shop's orders, inventory, and sales history
+The shop workspace is **scoped to the currently selected shop**. When a staff member opens a shop, all screens — tables, products, orders, accounting, and reports — reflect only that location's data.
 
 A Cashier or Waiter who is assigned to Shop A cannot navigate to Shop B's data — their session is locked to their assigned location.
 

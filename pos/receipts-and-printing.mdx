@@ -1,10 +1,10 @@
 ---
-title: "Print and Customize Receipts in BasePoint POS"
+title: "Print and Customize Receipts in BasePoint POS Duka"
 sidebarTitle: "Receipts & Printing"
-description: "Configure thermal printer settings, customize receipt headers and footers, and print or email receipts directly from the BasePoint POS payment flow."
+description: "Configure thermal printer settings, customize receipt content and appearance, and print or email receipts directly from the BasePoint POS payment flow."
 ---
 
-BasePoint POS (Duka) supports thermal receipt printing out of the box, with full control over how your receipts look. You can set header and footer text, toggle individual fields on or off, adjust font size and weight, and choose between an 80mm thermal roll format or a full A4 PDF layout. After every confirmed payment, the Print Bill modal gives your cashier a one-tap path to print or email the receipt to the customer.
+BasePoint POS (Duka) supports thermal receipt printing out of the box, with full control over how your receipts look. You can set the document type, toggle VAT and discount lines on or off, adjust font size and weight, and choose between an 80mm thermal roll format or a full A4 PDF layout. After every confirmed payment, the Print Bill modal gives your cashier a one-tap path to print, download, or email the receipt to the customer.
 
 ## Supported Printers
 
@@ -18,12 +18,21 @@ BasePoint POS is compatible with standard **80mm thermal receipt printers** that
 
 ## Setting Up Your Printer
 
+<Note>
+  The steps below (CUPS installation and driver setup) are system-level
+  configuration tasks typically performed by your **IT team** or system
+  administrator before handing the terminal over to cashiers. Regular POS
+  users do not need to complete these steps.
+</Note>
+
 <Steps>
   <Step title="Install CUPS (Linux only)">
     Open a terminal and run:
+
     ```bash
     sudo apt install cups
     ```
+
     On Windows or macOS, install the printer driver supplied by your hardware vendor and add the printer through the operating system's standard printer settings.
   </Step>
   <Step title="Install the thermal printer driver">
@@ -47,39 +56,53 @@ BasePoint POS is compatible with standard **80mm thermal receipt printers** that
   printed output.
 </Note>
 
-## Customizing Receipt Appearance
+## Printing a Receipt
 
-Adjust what appears on every receipt in **System Setup** → **Receipt Appearance**:
+After you confirm a payment, the **Print Bill** modal appears automatically. It previews the receipt on screen so you can verify it before printing. From this modal you can customize the output and choose how to deliver it:
+
+### Document Type
+
+Select the type of document to print using the **Document Type** selector:
+
+- **Bill** — an itemized pre-payment or in-progress bill.
+- **Receipt** — a post-payment confirmation document.
+- **Invoice** — a formal invoice for business clients.
+- **Quotation** — a price estimate valid for 30 days.
+
+### Print Format
+
+Toggle between **Thermal (POS)** and **A4 PDF** mode using the format switch:
+
+- **Thermal mode** — sends output to the configured 80mm thermal printer via the browser print dialog.
+- **A4 PDF mode** — renders a professional A4 layout. Use the **Save as PDF** action to save it locally.
+
+### Receipt Appearance
+
+When in thermal mode, use the controls in the Print Bill modal to adjust how the receipt looks before printing:
 
 <CardGroup cols={2}>
-  <Card title="Header & Business Info" icon="building">
-    Your shop name, address, phone number, and email are pulled automatically from your business profile. Add or edit this information under **Settings** → **Business Profile**.
+  <Card title="Font Size" icon="text-size" href="#receipt-appearance">
+    Choose a font size preset — **Small**, **Normal**, **Large**, **X-Large**, **XX-Large**, or **Huge** — or drag the slider to a custom size. Font size is clamped on the printed 80mm output to prevent line overflow.
   </Card>
-  <Card title="Footer Message" icon="message">
-    Enter a custom footer line such as "Thank you for dining with us!" or "Goods once sold are not returnable." This appears at the bottom of every receipt.
+  <Card title="Text Weight" icon="bold" href="#receipt-appearance">
+    Toggle between **Bold** and **Normal** text weight. Bold improves contrast and is easier to scan under low-light conditions.
   </Card>
-  <Card title="Logo" icon="image">
-    Toggle the logo on or off. When enabled, your tenant logo is printed at the top of the receipt. For best results, use a high-contrast black-and-white version of your logo.
+  <Card title="Show Discount" icon="percent" href="#receipt-appearance">
+    Toggle the discount line on or off. Only active when a discount has been applied to the order.
   </Card>
-  <Card title="VAT & Tax Number" icon="file-invoice">
-    Show or hide your VAT registration number. If DigiTax/ETR is enabled, the tax invoice number and KRA verification QR code appear automatically.
-  </Card>
-  <Card title="Staff & Order Details" icon="user">
-    Toggle visibility of the cashier name, table number, and order number on the printed receipt.
-  </Card>
-  <Card title="Font Size & Weight" icon="text-size">
-    Choose a font size preset (Small through Huge) and toggle **Bold** on or off. Font size on the printed 80mm thermal output is clamped to a safe maximum to prevent line overflow.
+  <Card title="Show VAT" icon="file-invoice" href="#receipt-appearance">
+    Toggle the VAT breakdown line on or off on the printed document.
   </Card>
 </CardGroup>
 
-## Printing a Receipt
+### Delivery Options
 
-After you confirm a payment, the **Print Bill** modal appears automatically. It previews the receipt on screen so you can verify it before printing. From this modal:
+From the Print Bill modal footer, use any of the following actions:
 
 - **Print Document** — sends the receipt to the configured thermal printer in 80mm format.
-- **Save as PDF** — switches to A4 layout and saves a PDF copy (useful for invoice records).
-- **Send via Email** — opens an email form. Enter the customer's email address and an optional personal message; the receipt is delivered as a formatted HTML email with the order summary.
-- **Download PDF** — saves a local PDF copy directly to your device.
+- **Save as PDF** — available when A4 PDF mode is active; saves a PDF copy to your device.
+- **Send via Email** — opens an email form. Enter the customer's email address and an optional personal message; the receipt is delivered as a formatted email with the order summary.
+- **Download PDF** — saves a local PDF copy directly to your device, regardless of the current format mode.
 - **Cancel** — closes the modal without printing. You can reprint any order later from the **Orders** list.
 
 <Tip>
@@ -89,16 +112,8 @@ After you confirm a payment, the **Print Bill** modal appears automatically. It 
   rather than a confirmed "Receipt."
 </Tip>
 
-## Digital Receipts
+## Header and Business Information
 
-If your BasePoint account has SMS or WhatsApp notification channels configured, you can send a digital receipt to the customer's phone number at the point of sale:
+Your shop name, address, phone number, PIN, and email are pulled automatically from your business profile and printed at the top of every receipt. To update this information, go to **Settings** → **Business Profile**.
 
-1. Ensure the customer's phone number is recorded on the order (enter it in the **Client** field on the cart).
-2. After confirming payment, the system automatically sends the receipt via the configured notification channel.
-3. No additional action is required from the cashier.
-
-<Info>
-  Digital receipt delivery depends on your notification integration settings.
-  Contact your BasePoint administrator to enable SMS or WhatsApp receipts for
-  your account.
-</Info>
+If **DigiTax / ETR** integration is enabled, a KRA verification QR code and ETR receipt number are printed automatically on every confirmed transaction — no extra steps required.

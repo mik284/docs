@@ -1,5 +1,5 @@
 ---
-title: "Take and Manage Customer Orders in BasePoint POS"
+title: "Take and Manage Customer Orders in BasePoint POS Duka"
 sidebarTitle: "Taking Orders"
 description: "Select a table, browse your menu by category, add items to the cart with modifiers, and send orders to the kitchen from the BasePoint POS dashboard."
 ---
@@ -13,7 +13,7 @@ Every sale in BasePoint POS (Duka) starts with an order. In restaurant mode, tha
     In **restaurant** or **hotel** mode, tap an available table on the Tables view. The POS opens that table's order screen. In **retail** mode, the POS opens a new cart automatically when you navigate to the order screen.
   </Step>
   <Step title="Browse the menu by category">
-    Categories are listed in the left sidebar. Tap a category to load its products in the main panel. Sub-categories appear as tabs within the panel. Scroll or swipe to browse all items.
+    Main categories are listed as tabs across the top of the menu panel. Tap a category to load its subcategories in the left sidebar. Select a subcategory, then tap a category card to load its products in the main panel.
   </Step>
   <Step title="Add items to the cart">
     Tap any product card to add one unit to the cart on the right panel. The cart updates instantly and shows a running subtotal.
@@ -34,14 +34,14 @@ Every sale in BasePoint POS (Duka) starts with an order. In restaurant mode, tha
 
 ## Searching for Items
 
-Use the **search bar** at the top of the menu panel to find products by name. The results filter in real time as you type.
+Use the **search bar** at the top of the menu panel to find products by name or price. The results filter in real time as you type.
 
-For high-volume retail environments, click the **QR / Barcode Scanner** icon in the menu toolbar to activate barcode scanning mode. Point your device camera or attached scanner at a product barcode — the item is added to the cart immediately without manual searching.
+For high-volume retail environments, use the **Scan** toggle in the top bar of the menu panel to switch to barcode scanning mode. Point your device camera or attached scanner at a product barcode — the item is added to the cart immediately without manual searching.
 
 <Tip>
-  Keep the barcode scanner active during a retail shift to serve customers
-  faster. The scanner icon is located in the top-right area of the menu
-  toolbar, represented by a QR code symbol.
+  Switch to **Scan** mode during a retail shift to serve customers faster. The
+  Browse / Scan toggle is located in the top-right area of the menu toolbar.
+  Switch back to **Browse** at any time to return to category browsing.
 </Tip>
 
 ## Cart Actions
@@ -49,22 +49,22 @@ For high-volume retail environments, click the **QR / Barcode Scanner** icon in 
 The cart panel supports several actions beyond simply adding items:
 
 <CardGroup cols={2}>
-  <Card title="Change Quantity" icon="plus-minus">
+  <Card title="Change Quantity" icon="plus-minus" href="#cart-actions">
     Use the **+** / **−** buttons on any line item to update the count. Set quantity to zero to remove the item, or tap the trash icon for a quicker removal.
   </Card>
-  <Card title="Remove Items" icon="trash">
+  <Card title="Remove Items" icon="trash" href="#cart-actions">
     Tap the **delete** icon on a cart line to remove that item entirely from the order.
   </Card>
-  <Card title="Order-Level Discount" icon="tag">
+  <Card title="Order-Level Discount" icon="tag" href="#cart-actions">
     Tap **Add Discount** at the bottom of the cart to apply a percentage or fixed-amount discount to the entire order total.
   </Card>
-  <Card title="Special Instructions" icon="note-sticky">
+  <Card title="Special Instructions" icon="note-sticky" href="#cart-actions">
     Add a note to any individual item (e.g., "Allergy: nuts") or to the overall order for the kitchen or cashier.
   </Card>
-  <Card title="Split the Bill" icon="scissors">
+  <Card title="Split the Bill" icon="scissors" href="#cart-actions">
     Use the **Split** option to divide the order total across multiple customers or payment methods before proceeding to checkout.
   </Card>
-  <Card title="Modifiers & Add-ons" icon="sliders">
+  <Card title="Modifiers & Add-ons" icon="sliders" href="#cart-actions">
     Tap a line item to expand the modifier panel and select optional extras or variants configured for that product.
   </Card>
 </CardGroup>

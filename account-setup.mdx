@@ -1,7 +1,7 @@
 ---
 title: "Set Up Your BasePoint POS Account and Shop"
 sidebarTitle: "Account Setup"
-description: "Configure your BasePoint POS shop profile, branding, bank details, notification preferences, and printer settings before taking your first order."
+description: "Configure your BasePoint POS shop profile, bank details, printer agents, receipt appearance, and notification preferences before taking your first order."
 ---
 
 Before your team processes a single order, take a few minutes to complete your shop setup. This section walks you through every tab inside **System Setup** — from your business profile and bank details to printer configuration and receipt appearance. Getting these settings right upfront ensures that receipts print correctly, notifications reach the right people, and your brand is represented consistently across the POS interface.
@@ -14,74 +14,80 @@ Before your team processes a single order, take a few minutes to complete your s
 
 Your shop profile contains the core business information that appears on receipts, in reports, and on the customer-facing display.
 
-Navigate to **Settings > System Setup** and select the **Profile** tab. Fill in the following fields:
+Navigate to **Settings > System Setup** and select the **System Profile** tab. Fill in the following fields:
 
 | Field | Description |
 |---|---|
-| **Shop Name** | Your trading name as it appears on receipts and the dashboard. |
-| **Phone Number** | Primary contact number printed on receipts. |
-| **Email Address** | Business email used for notifications and customer communications. |
-| **Address** | Physical address printed on receipts and invoices. |
-| **Logo** | Upload a PNG or JPG (recommended: 300 × 300 px, max 2 MB). |
-| **Color Scheme** | Choose a primary colour for the POS interface. |
+| **Business Name** | Your trading name as it appears on receipts and the dashboard. |
+| **Email** | Business email used for notifications and customer communications. |
+| **Phone** | Primary contact number printed on receipts and used for WhatsApp alerts. |
+| **Location** | Physical address printed on receipts and invoices. |
+| **Social Link** | Your business social media profile URL (optional). |
+| **KRA Pin** | Your Kenya Revenue Authority PIN, printed on tax receipts (Kenya). |
+| **P.O. Box** | Postal address, printed on formal receipts (optional). |
 
-Click **Save Profile** when all fields are complete.
+The tab also lets you link your M-Pesa payment method (Till number or Paybill details) so that the correct payment information appears on printed receipts.
 
-<Tip>
-  Use the **Color Scheme** picker to set your brand's primary colour — the same hex value used across your marketing materials. The colour you choose is applied to buttons, highlights, and active states throughout the entire POS interface, giving staff a branded, cohesive experience from the moment they log in. BasePoint POS uses **#0c6df6** as the default colour.
-</Tip>
+Click **Submit** (or **Update** if you are editing existing details) when all fields are complete.
 
 ## Bank Details
 
-Bank details appear on printed invoices and formal receipts, making it easier for corporate customers to process payments by bank transfer.
+Bank details appear on printed invoices and formal receipts, making it easier for corporate customers to process payments by bank transfer. You can add multiple bank accounts and mark one as the primary account.
 
-Navigate to **Settings > System Setup** and select the **Bank Details** tab. Enter the following:
+Navigate to **Settings > System Setup** and select the **Bank Details** tab. Click **Add Bank** to open the bank entry form and fill in the following:
 
-- **Bank Name** — the full name of your business bank (for example, *Equity Bank Kenya*).
-- **Account Number** — your business current account number.
-- **Branch** — the branch name or code where the account is held.
+| Field | Description |
+|---|---|
+| **Bank Name** | The full name of your business bank (e.g. *Equity Bank Kenya*). |
+| **Account Number** | Your business current account number. |
+| **Account Name** | The name on the bank account as it appears on statements. |
+| **Branch** | The branch name or code where the account is held. |
+| **SWIFT Code** | Required for international wire transfers (optional for local use). |
+| **Paybill No.** | Your M-Pesa Paybill number if payments are collected via Paybill (optional). |
 
-Click **Save Bank Details**. These fields are optional for cash-only businesses but recommended for any outlet that accepts invoice payments or bank transfers.
+Click **Save Changes** after adding or editing your bank details. If you have more than one bank account, use the **Set as Primary** link on any card to choose which account prints on receipts by default.
 
 ## Printer Settings
 
-BasePoint POS supports thermal receipt printers for fast, low-cost receipt printing at the counter.
+BasePoint POS routes print jobs through a lightweight **Print Agent** application that you install on the computer connected to your thermal printer. This approach means the browser never needs direct access to a local printer driver.
 
-Navigate to **Settings > System Setup** and select the **Printer Settings** tab. Configure the following:
+Navigate to **Settings > System Setup** and select the **Printer Settings** tab. The tab has three sub-sections:
 
-- **Printer Name** — the name of the printer as it appears on your operating system.
-- **Paper Width** — select **80mm** for standard thermal receipt rolls (the most common size for hospitality printers).
-- **Print Mode** — choose between *Automatic* (prints immediately on order completion) and *Manual* (staff trigger printing from the order screen).
-- **Number of Copies** — set how many receipt copies print per transaction (typically 1 for customers, 2 if you retain a merchant copy).
+**Connected Agents** — shows every Print Agent currently online for your shop. Once an agent is running, it appears here automatically. Use the **Assign Category** button on each agent card to map a product main-category (e.g. *Kitchen*, *Bar*, *Cashier*) to that printer. When an order is placed, items are routed to the agent assigned to their main category.
 
-Click **Save Printer Settings**.
+**Download Agent** — provides one-click downloads of the Print Agent installer for macOS (Apple Silicon) and Windows (64-bit). After downloading, run the installer, launch the app, enter your **Company Code** and **Shop ID**, then click **Connect**. The agent will appear in the Connected Agents list within seconds.
+
+**Printing Controls** — two global toggles that control printing behaviour across the entire POS:
+
+- **Captain Order Mode** — when enabled, a **Send** button appears in the cart drawer so staff can send orders to the kitchen printer without completing the full checkout flow.
+- **Print Method** — switch between *Browser* printing (the browser's built-in print dialog) and *API* printing (routed through connected Print Agents). Agent printing is only available when at least one agent is online.
 
 <Note>
-  If you're running BasePoint POS on a Linux machine, your thermal printer may require a **CUPS (Common Unix Printing System)** driver to be installed and configured before it appears in the printer list. Consult your printer manufacturer's documentation for the correct CUPS PPD file, then ensure the printer is shared on your local network so the POS can reach it.
+  The Print Agent app needs to be running on a machine that is on the same network as your thermal printer. You only need one agent per printer, but you can run multiple agents if you have printers in different stations (e.g. a kitchen printer and a cashier printer).
 </Note>
 
 ## Receipt Appearance
 
-Customise what your printed and digital receipts look like to reinforce your brand and include the information your customers need.
+Customise the font size and weight of your printed thermal receipts to match your printer and paper width.
 
 Navigate to **Settings > System Setup** and select the **Receipt Appearance** tab. You can configure:
 
-- **Receipt Header** — a short line of text printed at the top of every receipt (for example, your slogan or a thank-you message such as *"Thank you for dining with us!"*).
-- **Receipt Footer** — a closing message or legal disclaimer printed at the bottom (for example, WiFi password, returns policy, or social media handles).
-- **Show/Hide Fields** — toggle individual receipt fields on or off, including tax breakdown, cashier name, table number, order number, and customer name.
-- **Logo on Receipt** — toggle whether your shop logo prints at the top of receipts (requires a logo to be uploaded in the Profile tab).
+- **Font Size** — adjust using the slider or the preset dropdown (Small 10 px, Normal 13 px, Large 15 px, X-Large 17 px). Values above 15 px are clamped at print time to prevent text overflow on 80 mm rolls.
+- **Text Weight** — choose between **Bold** (the default, recommended for thermal printers) and **Normal**.
 
-Click **Save Receipt Settings** when your layout looks the way you want. Use the built-in **Preview** button to see a sample receipt before committing to the layout.
+A live preview in the tab shows exactly how a sample receipt will look with your chosen settings. Changes are saved automatically 600 milliseconds after you stop adjusting — no Save button required. Staff can still override these settings per print in the print modal, but those overrides are not persisted.
 
 ## Notification Settings
 
-BasePoint POS can alert you and your team when key events occur — such as low stock, completed sales, or shift summaries.
+BasePoint POS can send notifications to customers and staff via email and WhatsApp when key events occur.
 
-Navigate to **Settings > System Setup** and select the **Notification Settings** tab. Configure your preferred alert channels:
+Navigate to **Settings > System Setup** and select the **Notification Settings** tab. Toggle each channel on or off:
 
-- **Email Notifications** — enter one or more email addresses to receive daily sales summaries, low-stock alerts, and end-of-shift reports.
-- **WhatsApp Alerts** — enter a WhatsApp-enabled phone number to receive real-time transaction confirmations and critical alerts directly in WhatsApp.
+- **Email** — send notifications via email (powered by Brevo). Make sure a valid email address is saved in the **System Profile** tab.
+- **WhatsApp** — send notifications via WhatsApp (powered by Twilio). Requires a registered WhatsApp sender — see the **WhatsApp Registration** tab to set one up. You can also choose between **Sandbox Mode** (for testing, using the Twilio sandbox number) and **Production Mode** (for live customer messaging with your own registered number).
 
-Toggle each notification type on or off individually so your team only receives the alerts that are relevant to their role.
+Click **Save Changes** to apply your notification channel preferences.
 
-Click **Save Notification Settings** to apply your choices.
+<Tip>
+  If you enable WhatsApp notifications but have not yet registered a sender, the app will display a reminder in the Notification Settings tab directing you to the **WhatsApp Registration** tab. Complete that step first before switching WhatsApp to Production Mode.
+</Tip>

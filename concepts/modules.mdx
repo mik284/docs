@@ -1,56 +1,39 @@
 ---
-title: "Understanding BasePoint POS Modules and Features"
+title: "BasePoint POS Modules Overview: Duka, Pesa and More"
 sidebarTitle: "Modules"
-description: "BasePoint POS is built around five modules — Duka, Pesa, Mteja, Bandu, and Dala — each unlocked based on your subscription plan."
+description: "BasePoint POS is built around five modules — Duka, Pesa, Mteja, Bandu, and Dala — each activated independently to match your business needs."
 ---
 
-BasePoint POS follows a modular architecture, meaning your account only surfaces the tools that are relevant to your business. Instead of one monolithic platform, you get a focused workspace: the admin dashboard reads your tenant configuration on login and automatically routes you to the modules your plan has enabled — so your team never has to wade through features they don't use.
+BasePoint POS follows a modular architecture, meaning your account only surfaces the tools that are relevant to your business. Instead of one monolithic platform, you get a focused workspace: when you log in, you are automatically directed to the areas your account has enabled — so your team never has to wade through features they don't use.
 
 ## Available Modules
 
 <CardGroup cols={2}>
-  <Card title="Duka — Point of Sale" icon="cash-register">
+  <Card title="Duka — Point of Sale" icon="cash-register" href="/concepts/modules#duka-point-of-sale">
     The core POS and restaurant management module. Duka handles your sales floor end-to-end: table management, cart and order creation, kitchen routing, product and category setup, inventory tracking, purchase orders, supplier management, delivery notes, gift cards, and itemized sales reports. Works across restaurant, retail, hospital, and hotel modes.
   </Card>
-  <Card title="Pesa — Accounting" icon="book">
+  <Card title="Pesa — Accounting" icon="book" href="/concepts/modules#pesa-accounting">
     A full double-entry accounting engine built into your POS account. Pesa covers chart of accounts, manual and automated journal entries, invoices and bills, credit and debit notes, bank statement import and categorization, bank reconciliation, and financial reports including profit & loss, balance sheet, trial balance, cash flow, VAT summary, and AR/AP ageing.
   </Card>
-  <Card title="Mteja — CRM" icon="users">
+  <Card title="Mteja — CRM" icon="users" href="/concepts/modules#mteja-crm">
     Customer relationship management for sales-driven teams. Mteja gives you a lead pipeline, campaign tracking, sales targets and leaderboards, budget management with approval workflows, lead activity logging, and automated lead workflow rules. Sales agents get a focused view; managers get approval controls and budget oversight.
   </Card>
-  <Card title="Bandu — HR & Payroll" icon="id-badge">
+  <Card title="Bandu — HR & Payroll" icon="id-badge" href="/concepts/modules#bandu-hr-payroll">
     Human resources and workforce management for your locations. Bandu handles staff shift scheduling, attendance clock-in/out, leave applications and approvals, leave balance tracking, and HR notification emails. Employees use a self-service view; HR managers get full oversight including reconciliation and balance seeding.
   </Card>
-  <Card title="Dala — Real Estate" icon="building">
+  <Card title="Dala — Real Estate" icon="building" href="/concepts/modules#dala-real-estate">
     Property portfolio management for hospitality businesses with real estate operations. Dala covers property and unit listings, property type configuration, sales and lease management, rent collection, maintenance tracking, commission management, and dedicated real estate reports — all linked to your existing tenant account.
   </Card>
 </CardGroup>
 
-## How the Dashboard Routes You
+## How Modules Work
 
-When you log in, BasePoint POS checks which modules your tenant has enabled and directs you to the right landing page automatically:
-
-- **POS enabled** → you land on the Tables view (`/tables`)
-- **Accounting only** → you land on the Accounting dashboard (`/accounting`)
-- **Mteja (CRM) only** → you land on the Mteja workspace (`/mteja`)
-- **Dala only** → you land on the Home dashboard (`/home-dashboard`)
+Module activation is managed at the account level. When a module is enabled, it becomes available to every user in your account. When it is disabled, those screens and features are hidden across the platform — no data is lost, the module is simply inactive.
 
 This means you can have an accounting team member whose account never shows POS screens, and a cashier whose account never exposes accounting menus — all from the same platform.
 
-## Module Availability by Plan
-
-The table below shows which modules are available at each subscription tier. Module access is enforced at the tenant level, so enabling or disabling a module affects every user in your account.
-
-| Module | Starter | Growth | Business | Enterprise |
-|---|---|---|---|---|
-| **Duka** (POS / Restaurant) | ✅ | ✅ | ✅ | ✅ |
-| **Pesa** (Accounting) | — | ✅ | ✅ | ✅ |
-| **Mteja** (CRM) | — | — | ✅ | ✅ |
-| **Bandu** (HR & Payroll) | — | — | ✅ | ✅ |
-| **Dala** (Real Estate) | — | — | — | ✅ |
-
 <Note>
-  A full billing dashboard is coming soon. In the meantime, contact [BasePoint Cloud Services support](https://hospitality.reliatech.co.ke) to enable or disable modules on your account. Module changes take effect immediately after your session is refreshed.
+  A full billing and subscription dashboard is coming soon. In the meantime, contact [BasePoint Cloud Services support](https://hospitality.reliatech.co.ke) to enable or disable modules on your account. Module changes take effect immediately after your session is refreshed.
 </Note>
 
 ## Combining Modules

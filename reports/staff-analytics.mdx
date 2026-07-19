@@ -1,10 +1,10 @@
 ---
 title: "Track Staff Performance and Sales Analytics"
 sidebarTitle: "Staff Analytics"
-description: "Monitor individual staff sales performance, compare top sellers, review shift hours and attendance, and identify your highest-earning team members in BasePoint POS."
+description: "Monitor individual staff sales performance, identify your top earners, review shift attendance, and track leave balances for your team in BasePoint POS."
 ---
 
-Staff analytics give you an objective, data-backed picture of how your team is performing — who is driving the most revenue, how actual hours worked compare to the schedule, and whether attendance is consistent. Use this data to recognize top performers, support struggling team members, and make informed decisions about scheduling and incentives.
+Staff analytics give you an objective, data-backed picture of how your team is performing — who is driving the most revenue, how consistently staff are showing up, and how leave balances are tracking. Use this data to recognize top performers, support struggling team members, and make informed decisions about scheduling and incentives.
 
 <Note>
   Staff analytics are scoped to the shop you're currently logged into. Users with admin access and multi-shop permissions can view consolidated cross-shop staff data from the Admin Dashboard.
@@ -12,82 +12,55 @@ Staff analytics give you an objective, data-backed picture of how your team is p
 
 ## Staff Sales Performance
 
-Navigate to **Reports > Top Sellers** to view sales attributed to each staff member.
+Navigate to **Reports**, then select the **Top Earners** report tab to view sales attributed to each staff member.
 
-BasePoint POS attributes a transaction to the staff member who was logged in (via their credentials or PIN) when the sale was processed. The Top Sellers report shows:
+BasePoint POS attributes a transaction to the staff member who was logged in when the sale was processed. The Top Earners report shows each staff member's total sales revenue for the selected date range, ranked from highest to lowest. You can also configure the staff and platform revenue share split to calculate each team member's earnings contribution.
 
-| Metric | Description |
-|---|---|
-| **Staff Member** | Name and role of the team member |
-| **Number of Transactions** | Total count of sales processed by this staff member in the period |
-| **Total Revenue** | Sum of all transaction values attributed to them |
-| **Average Order Value** | Total revenue ÷ number of transactions |
-| **Rank** | Position in the leaderboard sorted by total revenue or transaction count |
+To generate the report:
 
-Switch between **Revenue** and **Quantity** sorting using the **Sort By** dropdown at the top of the report. Apply a date range filter to review performance over any period.
+1. Go to **Reports** in the main sidebar.
+2. Select the **Top Earners** tab.
+3. Set your date and time range.
+4. Optionally select a specific branch.
+5. Set the staff and platform revenue share percentages (they must total 100%).
+6. Click **Generate Top Earners**.
 
 <Tip>
-  Use the Top Sellers report during staff reviews and one-on-ones to celebrate strong performance with specific data. Recognizing high earners publicly — even a simple "top seller of the month" announcement — has a measurable positive effect on team morale and healthy competition.
+  Use the Top Earners report during staff reviews and one-on-ones to celebrate strong performance with specific data. Recognizing high earners publicly — even a simple "top seller of the month" announcement — has a measurable positive effect on team morale and healthy competition.
 </Tip>
 
-## Shift Hours Report
+## Shift Schedule and Attendance
 
-Compare scheduled hours against the hours staff actually worked.
+Navigate to **Employee Shift** from the main menu to manage and review your team's schedule and attendance records. This section has several tabs:
 
-1. Navigate to **Employee Shift** from the main menu.
-2. Open the **Analytics** tab.
-3. Apply a date range to scope the report to the period you want to review.
+### Shifts
 
-The shift hours report shows:
+The **Shifts** tab shows the shift calendar for your team. You can see which staff members are scheduled and manage upcoming rotas from here.
 
-- **Scheduled hours** — the hours you assigned to each staff member on the shift calendar
-- **Actual hours** — derived from clock-in and clock-out timestamps
-- **Variance** — the difference between scheduled and actual, flagged when significant
-- **Overtime hours** — hours worked beyond the scheduled shift
+### Attendance
 
-Export the report to CSV for import into your payroll software or to share with your accountant.
+The **Attendance** tab (available when the Bandu HR module is enabled) shows each staff member's attendance history for the selected period, including:
 
-## Clock-In Attendance
+- **Present** — days the staff member clocked in on time
+- **Late** — days where clock-in was recorded after the scheduled shift start
+- **Absent** — scheduled shift days with no clock-in record
+- **On Leave** — days covered by an approved leave request
+- **Actual hours worked** — derived from clock-in and clock-out timestamps
+- **Overtime hours** — hours worked beyond the scheduled shift end
+- **Attendance rate** — percentage of working days where the staff member was present or late
 
-Monitor day-by-day attendance records from **Admin > Staff Clock-In**.
-
-The attendance view shows:
-
-- All staff who clocked in on the selected date
-- Exact clock-in and clock-out times
-- Late arrivals (highlighted when clock-in is after the scheduled shift start)
-- Early departures (highlighted when clock-out is before the scheduled shift end)
-- Absences — staff members with a scheduled shift who have no clock-in record
-
-**To review attendance for a specific period:**
-
-1. Navigate to **Admin > Staff Clock-In**.
-2. Use the date range picker to select the period.
-3. Optionally filter by staff member.
-4. Review the attendance table or export to CSV.
+Use the date range picker to scope the view to the period you want to review.
 
 <Accordion title="What if a staff member forgot to clock in or out?">
-  Managers can manually edit clock-in and clock-out times from the Staff Clock-In admin view. Click the pencil icon on any record row, adjust the time, and save with a note explaining the manual correction. All edits are logged for audit purposes.
+  Managers with the appropriate permissions can manually adjust attendance records. Locate the record in the Attendance tab, edit the clock-in or clock-out time, and save with a note explaining the correction. All manual edits are logged for audit purposes.
 </Accordion>
 
-## Wages Reporting
+## Leave Balances
 
-Navigate to **Admin > Wages** to review wage records and payment status for each staff member.
+The **My Leave** tab (available when the Bandu HR module is enabled) shows each staff member's leave entitlements and remaining balances for the current period. Leave types include Annual, Sick, Emergency, Maternity, Paternity, and Unpaid leave, depending on your HR configuration.
 
-The Wages report includes:
-
-| Column | Description |
-|---|---|
-| **Staff Member** | Name and department |
-| **Pay Period** | The period covered by this wage record |
-| **Hours Worked** | Total hours from the shift analytics for the period |
-| **Gross Wage** | Calculated amount based on hourly rate or fixed salary |
-| **Deductions** | Any recorded deductions (advances, penalties) |
-| **Net Payable** | Final amount to pay |
-| **Payment Status** | Pending / Processing / Paid |
-
-Filter by period and staff member to view individual payment histories. Export to CSV for your accountant or payroll processor.
+Managers can review leave requests and balances from the **Admin** section. Staff members can view their own leave balance and submit new requests directly from the Employee Shift page.
 
 <Info>
-  If your subscription includes the **Bandu Payroll** module, the full payroll run — including tax calculations, statutory deductions, and pay slips — is handled in the Bandu section with direct integration to shift hours and leave balances.
+  The Attendance, Leave, and Payroll features require the **Bandu HR** module. Enable it from the **Discover** page to unlock the full suite of HR tools, including shift scheduling, leave management, and attendance tracking.
 </Info>

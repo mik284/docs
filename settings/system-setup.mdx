@@ -1,10 +1,10 @@
 ---
-title: "System Setup: Configure Your BasePoint POS Shop"
+title: "System Setup: Configure Your BasePoint POS Settings"
 sidebarTitle: "System Setup"
-description: "Use System Setup in BasePoint POS to configure your shop profile, payment details, printer, receipt appearance, notifications, and WhatsApp integration."
+description: "Use System Setup in BasePoint POS to configure payment details, printer, receipt appearance, notifications, and WhatsApp integration for your shop."
 ---
 
-System Setup is the central configuration hub for your BasePoint POS shop. Everything from your business name and logo to your receipt footer, printer settings, and WhatsApp sender registration lives here. Work through each tab when you first set up your shop, and return whenever your business details or preferences change.
+System Setup is the central configuration hub for your BasePoint POS shop. Everything from your payment details and bank account to your receipt footer, printer settings, and WhatsApp sender registration lives here. Work through each tab when you first set up your shop, and return whenever your business details or preferences change.
 
 <Warning>
   Each tab in System Setup saves independently. Changes you make on one tab are **not** saved automatically when you switch to another tab. Click **Save** on every tab before navigating away to avoid losing your changes.
@@ -13,22 +13,8 @@ System Setup is the central configuration hub for your BasePoint POS shop. Every
 Navigate to **Settings > System Setup** to access the configuration tabs below.
 
 <Tabs>
-  <Tab title="Shop Profile">
-    Set your public-facing business identity. This information appears on receipts, customer communications, and your portal.
-
-    | Field | Description |
-    |---|---|
-    | **Business Name** | Your shop or restaurant name as it appears to customers |
-    | **Phone Number** | Primary contact number displayed on receipts |
-    | **Email Address** | Business email for customer correspondence |
-    | **Physical Address** | Street address shown on receipts and invoices |
-    | **Logo** | Upload your business logo (PNG or JPG, recommended 200×200 px) |
-    | **Color Scheme** | Choose your brand's primary color for the POS interface |
-
-    Click **Save Profile** after making changes.
-  </Tab>
-  <Tab title="Payment Details">
-    Enter the payment details your customers need to complete mobile money or bank transfers.
+  <Tab title="Payment Methods">
+    Configure the payment details your customers use to complete mobile money or bank transfers.
 
     | Field | Description |
     |---|---|
@@ -65,6 +51,19 @@ Navigate to **Settings > System Setup** to access the configuration tabs below.
       Enable **Auto-Print on Payment** to speed up service — cashiers don't need to manually trigger receipts for every transaction.
     </Tip>
   </Tab>
+  <Tab title="Privacy">
+    Control how customer data is stored and managed.
+
+    | Setting | Description |
+    |---|---|
+    | **Data Retention Period** | Number of days to retain transaction and customer records |
+    | **Customer Data Collection** | Choose whether to prompt for customer details on every sale |
+    | **Marketing Consent** | Require opt-in before adding customers to campaign lists |
+
+    <Info>
+      Review your data retention settings to ensure compliance with applicable data protection regulations in your country.
+    </Info>
+  </Tab>
   <Tab title="Receipt Appearance">
     Customize what appears on customer receipts.
 
@@ -78,53 +77,72 @@ Navigate to **Settings > System Setup** to access the configuration tabs below.
     | **Show Order Number** | Include the internal order reference number |
     | **Custom Fields** | Add up to two custom label/value pairs to the receipt |
   </Tab>
-  <Tab title="Privacy Settings">
-    Control how customer data is stored and managed.
+  <Tab title="System Profile">
+    Set your public-facing business identity. This information appears on receipts, customer communications, and your portal.
 
-    | Setting | Description |
+    | Field | Description |
     |---|---|
-    | **Data Retention Period** | Number of days to retain transaction and customer records |
-    | **Customer Data Collection** | Choose whether to prompt for customer details on every sale |
-    | **Marketing Consent** | Require opt-in before adding customers to campaign lists |
+    | **Business Name** | Your shop or restaurant name as it appears to customers |
+    | **Phone Number** | Primary contact number displayed on receipts |
+    | **Email Address** | Business email for customer correspondence |
+    | **Physical Address** | Street address shown on receipts and invoices |
+    | **Logo** | Upload your business logo (PNG or JPG, recommended 200×200 px) |
+    | **Color Scheme** | Choose your brand's primary color for the POS interface |
 
-    <Info>
-      Review your data retention settings to ensure compliance with applicable data protection regulations in your country.
-    </Info>
+    Click **Save** after making changes.
   </Tab>
   <Tab title="Notification Settings">
-    Configure which automated email alerts BasePoint POS sends to you and your team.
+    Choose which channels BasePoint POS uses to send automated notifications to your customers.
 
-    | Notification | Trigger |
+    | Channel | Description |
     |---|---|
-    | **Daily Sales Summary** | Sent at end of business day with total revenue, transactions, and top items |
-    | **Low Stock Alert** | Triggered when a product's quantity falls below its reorder level |
-    | **New Order Notification** | Sent when a new order is placed (useful for online/delivery orders) |
+    | **Email** | Send notifications via email. Toggle on to enable email delivery for your customers. |
+    | **WhatsApp** | Send notifications via WhatsApp. Requires a registered WhatsApp sender (see the **WhatsApp Registration** tab). |
 
-    Enter one or more recipient email addresses in the **Notification Recipients** field, separated by commas. All enabled notifications are sent to every address listed.
+    Toggle each channel on or off, then click **Save Changes**.
+
+    <Note>
+      If you enable WhatsApp notifications without a registered sender number, you will be prompted to complete WhatsApp Registration first.
+    </Note>
+
+    **WhatsApp Mode**
+
+    When WhatsApp is enabled, choose between two operating modes:
+
+    | Mode | When to use |
+    |---|---|
+    | **Sandbox** | Testing only. Uses a shared Twilio test number. Recipients must opt in to the sandbox before they can receive test messages. |
+    | **Production** | Live messaging using your registered WhatsApp Business number. Use this once your sender is verified and you are ready to message real customers. |
   </Tab>
   <Tab title="WhatsApp Registration">
-    Register a WhatsApp Business sender number to send receipts, order confirmations, and marketing messages to customers.
+    Register a WhatsApp Business sender number to send receipts, order confirmations, and messages to customers.
+
+    **Choose a mode before registering:**
+
+    | Mode | Description |
+    |---|---|
+    | **Sandbox** | Test WhatsApp messaging without a dedicated business number. Uses a shared Twilio sandbox number. |
+    | **Production** | Register a dedicated business phone number for live customer messaging. |
+
+    **Production registration steps:**
 
     <Steps>
-      <Step title="Enter your business phone number">
-        Type the phone number you want to use as your WhatsApp sender. This must be a dedicated business number — it cannot be a number already active on a personal WhatsApp account.
+      <Step title="Enter your business details">
+        Fill in your **Phone Number** (in international format, e.g. +254712345678), **Business Name**, and optional details such as address, email, business category, and website.
       </Step>
-      <Step title="Request the OTP">
-        Click **Send OTP**. WhatsApp sends a one-time verification code to the number via SMS or voice call.
+      <Step title="Submit the registration">
+        Click **Register WhatsApp Sender**. BasePoint POS submits your number for verification. The system checks the status automatically — keep this page open while it processes.
       </Step>
-      <Step title="Verify the number">
-        Enter the OTP in the verification field and click **Verify**.
+      <Step title="Enter the OTP">
+        Once your number is ready for verification, a 6-digit OTP is sent to the registered phone number via WhatsApp. Enter it in the verification screen and click **Verify OTP**.
       </Step>
-      <Step title="Enable notification types">
-        Toggle on the message types you want to send via WhatsApp: receipts, order confirmations, and campaign messages.
-      </Step>
-      <Step title="Save">
-        Click **Save Registration**. Your WhatsApp sender is now active.
+      <Step title="Registration complete">
+        When verification succeeds, your WhatsApp sender is active and ready to send messages to customers.
       </Step>
     </Steps>
 
     <Warning>
-      The phone number you register cannot be an active personal WhatsApp account. Using a personal number will disconnect it from the WhatsApp app on that phone. Use a dedicated SIM for your business sender.
+      The phone number you register for production cannot be an active personal WhatsApp account. Registering a personal number will disconnect it from the standard WhatsApp application on that phone. Use a dedicated SIM for your business sender.
     </Warning>
   </Tab>
   <Tab title="Hotel Settings">

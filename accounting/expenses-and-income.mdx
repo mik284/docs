@@ -15,7 +15,7 @@ Use Expenses to record direct business costs such as rent, utilities, salaries, 
     Navigate to **Accounting > Expenses**.
   </Step>
   <Step title="Add a new expense">
-    Click **Add Expense** to open the expense form.
+    Click **Post Expense** to open the expense form.
   </Step>
   <Step title="Fill in the expense details">
     Complete the following fields:
@@ -24,12 +24,21 @@ Use Expenses to record direct business costs such as rent, utilities, salaries, 
     - **Amount** — the total cost
     - **Description** — a brief note explaining the expense
     - **Reference** — a receipt number, invoice reference, or internal code
-    - **Vendor** — the supplier or payee (optional)
+    - **Payment Method** — how the expense was paid (e.g., Cash, M-Pesa, Bank Transfer)
   </Step>
   <Step title="Save">
-    Click **Save**. The expense is created with a **Draft** status. An approver can then review and approve it, which posts the corresponding journal entry.
+    Click **Save**. The expense is created with a **Draft** status. An approver can then review and approve it, which posts the corresponding journal entry to your books.
   </Step>
 </Steps>
+
+Expense statuses move through the following stages:
+
+| Status | Meaning |
+|---|---|
+| **Draft** | Saved but not yet submitted for approval — editable |
+| **Pending** | Submitted and awaiting approval |
+| **Approved** | Approved and posted to your books as a journal entry |
+| **Voided** | Cancelled — the journal entry is reversed if one was already posted |
 
 Common expense categories to set up in your chart of accounts include:
 
@@ -55,14 +64,17 @@ Navigate to **Accounting > Bills** to view all supplier invoices. Bills move thr
 |---|---|
 | **Draft** | Saved but not yet confirmed — editable |
 | **Pending** | Confirmed and awaiting payment |
-| **Paid** | Payment has been recorded against the bill |
+| **Partially Paid** | Payment has been partially recorded against the bill |
+| **Paid** | Payment has been recorded in full |
+| **Overdue** | Past the due date with an outstanding balance |
+| **Voided** | Cancelled |
 
 <Steps>
   <Step title="Open Bills">
     Navigate to **Accounting > Bills**.
   </Step>
-  <Step title="Add a new bill">
-    Click **Add Bill**.
+  <Step title="Create a new bill">
+    Click **Create Supplier Bill**.
   </Step>
   <Step title="Enter bill details">
     Fill in:
@@ -85,7 +97,7 @@ Use the Income page for revenue that does not come through the POS — for examp
     Navigate to **Accounting > Income**.
   </Step>
   <Step title="Add income">
-    Click **Add Income**.
+    Click **Post Income / Expense**.
   </Step>
   <Step title="Enter income details">
     Fill in:
@@ -103,16 +115,27 @@ Use the Income page for revenue that does not come through the POS — for examp
 
 Petty cash covers small, day-to-day cash expenditures that are too minor to process through a formal expense or bill — for example, buying printer paper or paying for a taxi fare.
 
-Navigate to **Accounting > Petty Cash** to manage your petty cash fund. For each transaction, record:
+Navigate to **Petty Cash** (available from the main menu) to manage your petty cash fund. For each transaction, record:
 
-- **Amount** — the cash spent
-- **Purpose** — what the money was used for
-- **Authorized by** — the team member who approved the spend
+- **Amount** — the cash spent or deposited
+- **Transaction Type** — whether it is a Deposit, Withdrawal, or Expense
+- **Description** — what the money was used for
+- **Category** — one of Office Supplies, Transport, Meals, Utilities, Repairs, or Other
+- **Payee / Recipient** — who the payment was made to or received from
+- **Payment Method** — Cash, M-Pesa, Bank Transfer, Card, Cheque, or Other
 
-The petty cash page shows a **running balance** so you always know how much cash remains in the fund. When the fund runs low, record a **top-up** to replenish it from your main cash or bank account — this creates the corresponding journal entry automatically.
+Petty cash transactions follow a simple approval workflow:
+
+| Status | Meaning |
+|---|---|
+| **Pending** | Recorded but awaiting approval |
+| **Approved** | Confirmed and reflected in your petty cash balance |
+| **Voided** | Cancelled |
+
+The petty cash dashboard shows your **current balance**, **total deposits**, **total withdrawals**, and the number of **pending transactions** awaiting approval.
 
 <Info>
-  Set a maximum balance for your petty cash fund and top it up in fixed amounts (e.g., always replenish to KES 5,000). This makes petty cash easier to audit and reduces the risk of untracked cash accumulating.
+  Set a maximum balance for your petty cash fund and top it up in fixed amounts (e.g., always replenish to KES 5,000). Record each top-up as a Deposit transaction. This makes petty cash easier to audit and reduces the risk of untracked cash accumulating.
 </Info>
 
 ## Sales Receipts

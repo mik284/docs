@@ -27,7 +27,7 @@ Post a manual journal entry when you need to record:
     Navigate to **Accounting > Journals**.
   </Step>
   <Step title="Start a new entry">
-    Click **New Journal Entry** to open the entry form.
+    Click **New Entry** to open the entry form.
   </Step>
   <Step title="Set the date and reference">
     Choose the **entry date** (typically the date the transaction occurred) and enter a **reference number** for easy retrieval — for example, *JE-2024-001*.
@@ -42,7 +42,7 @@ Post a manual journal entry when you need to record:
     Enter a clear memo explaining what this entry is for. Good memos make future audits and reviews much faster.
   </Step>
   <Step title="Save or post">
-    Choose **Save as Draft** to review the entry later, or click **Post** to lock it and immediately update your account balances.
+    Choose **Save as Draft** to review the entry later, or click **Post Entry** to lock it and immediately update your account balances.
   </Step>
 </Steps>
 
@@ -53,26 +53,26 @@ Post a manual journal entry when you need to record:
 </Accordion>
 
 <Accordion title="Posted">
-  The entry has been confirmed and its amounts are reflected in your account balances and financial reports. A posted entry cannot be edited directly — you must reverse it to make a correction.
+  The entry has been confirmed and its amounts are reflected in your account balances and financial reports. A posted entry cannot be edited directly — you must void it to make a correction.
 </Accordion>
 
-<Accordion title="Reversed">
-  A reversing entry has been created against this entry, effectively cancelling its effect on account balances. Both the original and the reversing entry remain visible in the journal list for a complete audit trail.
+<Accordion title="Voided">
+  The entry has been voided. Pesa automatically creates a matching reversal entry (debits and credits swapped) to cancel the effect on account balances. Both the original and the reversal entry remain visible in the journal list for a complete audit trail.
 </Accordion>
 
-## Reversing a Journal Entry
+## Voiding a Posted Journal Entry
 
 If you need to correct or cancel a posted entry:
 
 1. Open the posted journal entry from **Accounting > Journals**.
-2. Click **Reverse**.
-3. Pesa automatically creates a new entry with the debit and credit lines swapped, dated today.
-4. The reversing entry is posted immediately and the original entry is marked **Reversed**.
+2. Click **Void Entry**.
+3. Enter a **void reason** explaining why the entry is being cancelled — this is required.
+4. Confirm. Pesa automatically creates a reversal entry with the debit and credit lines swapped, and marks the original entry as **Voided**.
 
-After reversing, create a new journal entry with the correct values if needed.
+After voiding, create a new journal entry with the correct values if needed.
 
 <Warning>
-  Posted journal entries cannot be edited. If you spot an error in a posted entry, use the Reverse function to cancel it, then post a new corrected entry. Editing posted transactions would compromise your audit trail.
+  Posted journal entries cannot be edited. If you spot an error in a posted entry, use the Void Entry action to cancel it, then post a new corrected entry. Editing posted transactions would compromise your audit trail.
 </Warning>
 
 ## Credit and Debit Notes

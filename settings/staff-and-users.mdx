@@ -1,10 +1,10 @@
 ---
-title: "Manage Staff Accounts, Roles, and Shifts"
+title: "Manage Staff Accounts, Roles, and Leave in BasePoint POS"
 sidebarTitle: "Staff & Users"
-description: "Add staff members, assign roles with the right permissions, manage employee shifts, and track clock-in attendance in BasePoint POS."
+description: "Add staff members, assign roles with the right permissions, manage departments, and handle leave requests and entitlements in BasePoint POS."
 ---
 
-Staff & Users is where you create and manage every person who works with BasePoint POS — from cashiers and waiters to managers and administrators. Give each team member their own account with the right level of access, schedule their shifts, track attendance, and manage leave requests from one central location.
+Staff & Users is where you create and manage every person who works with BasePoint POS — from cashiers and waiters to managers and administrators. Give each team member their own account with the right level of access, configure permissions, and manage leave requests from one central location.
 
 ## Adding a Staff Member
 
@@ -49,7 +49,7 @@ Encourage floor staff to always use their own PIN (not a shared login) so that s
 
 ## Managing Roles
 
-Roles define what a staff member can see and do inside BasePoint POS. Navigate to **Staff & Users > Roles** to view, create, and edit roles.
+Roles define what a staff member can see and do inside BasePoint POS. Navigate to **Staff & Users**, then open the **Roles** tab to view, create, and edit roles.
 
 Each role is a named permission set. You can create as many custom roles as your business needs. Common roles include:
 
@@ -61,45 +61,36 @@ Each role is a named permission set. You can create as many custom roles as your
 | **Manager** | Full access except system configuration |
 | **Admin** | Unrestricted access to all settings and data |
 
-For a full breakdown of individual permissions, see [Roles & Permissions](/concepts/roles-permissions).
+For a full breakdown of individual permissions, open the **Permissions** tab under **Staff & Users**.
 
-## Employee Shifts
+## Departments
 
-Plan your team's working schedule using the Employee Shifts feature.
-
-1. Navigate to **Employee Shift** from the main menu (or via **Admin > Employee Shift**).
-2. Click **Create Shift** to set up a new schedule block.
-3. Assign the shift to a staff member and define the **start time**, **end time**, and **date(s)**.
-4. Repeat for all staff to build out your weekly or monthly roster.
-5. Switch between **Week View** and **Month View** using the calendar toggle to review your full schedule at a glance.
-
-Staff members can log in to the employee portal to view their own scheduled shifts.
-
-## Clock-In Tracking
-
-Monitor real-time attendance and actual hours worked.
-
-Navigate to **Admin > Staff Clock-In** to see:
-
-- Which staff are currently clocked in
-- Clock-in and clock-out timestamps for each shift
-- Late arrivals and early departures flagged automatically
-
-Staff clock in and out directly from the POS interface. The clock-in button appears on the POS home screen when a staff member authenticates.
-
-To review attendance history, apply the date range filter and optionally filter by staff member. Export the data to CSV for payroll processing.
+If your account has the CRM module enabled, a **Departments** tab appears under **Staff & Users**. Use it to create and manage the departments in your business (e.g. Kitchen, Front of House, Accounts) and assign staff members to the appropriate department for reporting and communication purposes.
 
 ## Leave Management
 
-Give your team a self-service leave portal while keeping managers in control of approvals.
+<Info>
+  Leave management features are available when the **Bandu** payroll module is enabled on your account. Contact BasePoint POS support to activate this module.
+</Info>
 
-**For staff:** Staff log in to the **Staff Leave Portal** to submit a leave request. They select the leave type (annual leave, sick leave, emergency leave), specify the dates, and add a note for context.
+When Bandu is enabled, two additional tabs appear under **Staff & Users**:
 
-**For managers:** Open **Admin > Staff Leave** to see all pending requests. Approve or reject each request with a single click. Approved leave automatically updates the shift calendar to show the staff member as unavailable.
+**Leave Requests tab** — shows all staff leave requests with a live badge count of pending approvals. As a manager you can approve or reject each request with a single click. Approved leave is reflected automatically in attendance records.
 
-<Accordion title="How do I set up leave balances?">
-  Navigate to **Staff & Users > Leave Balance Setup** to define the number of days each leave type provides per year (e.g. 21 days annual leave, 10 days sick leave). Balances are tracked per staff member and decrement automatically as leave requests are approved.
-</Accordion>
+**Leave Entitlements tab** — define how many days each leave type provides per year for your team. The following leave types are supported:
+
+| Leave Type | Typical Use |
+|---|---|
+| **Annual** | Standard paid annual leave |
+| **Sick** | Illness or medical appointments |
+| **Emergency** | Urgent unforeseen circumstances |
+| **Maternity** | Maternity leave for new mothers |
+| **Paternity** | Paternity leave for new fathers |
+| **Unpaid** | Leave taken without pay |
+
+Balances are tracked per staff member and update automatically as leave requests are approved.
+
+**For staff submitting requests:** Staff log in to the **Staff Leave Portal** to submit a leave request. They select the leave type, specify the start and end dates, and optionally add a reason. The portal also displays their remaining leave balance for each type. Pending requests can be withdrawn before a manager acts on them.
 
 ## Wages
 
@@ -112,5 +103,5 @@ Record and manage staff wage payments from **Admin > Wages**:
 Export wage records to CSV for your accountant or payroll software.
 
 <Info>
-  If your subscription includes the **Bandu Payroll** module, payroll processing is handled in the Bandu section with full integration to shift hours and leave records.
+  Full payroll processing — salary calculations, payslips, deductions, and tax summaries — is part of the **Bandu Payroll** module. When enabled, a **Payroll** tab appears under **Staff & Users**.
 </Info>

@@ -6,9 +6,9 @@ description: "Import your bank statement into Pesa and match transactions agains
 
 Bank reconciliation is the process of comparing your accounting records in Pesa against the actual transactions on your bank statement. Reconciling regularly ensures that every deposit, withdrawal, and bank charge is accounted for — and helps you catch discrepancies such as duplicate entries, missing payments, or unauthorized transactions before they cause larger problems.
 
-## Uploading a Bank Statement
+## Importing a Bank Statement
 
-Before you can reconcile, import your bank statement into Pesa.
+Before you can reconcile, upload your bank statement into Pesa. Bank statement imports and reconciliation are handled on separate pages — import first, then reconcile.
 
 <Steps>
   <Step title="Open Bank Statements">
@@ -21,41 +21,41 @@ Before you can reconcile, import your bank statement into Pesa.
     Choose the bank account in Pesa that the statement belongs to. If the account does not exist yet, create it first under **Accounting > Accounts** as an Asset account with the bank account sub-type.
   </Step>
   <Step title="Upload your file">
-    Click **Upload File** and select your bank statement exported as a **CSV** or **Excel** file from your online banking portal.
+    Click **Upload File** and select your bank statement exported from your online banking portal.
   </Step>
-  <Step title="Map the columns">
-    Pesa asks you to map the columns in your file to the expected fields: **Date**, **Description**, **Debit**, and **Credit**. Use the dropdown next to each field to select the matching column from your file.
+  <Step title="Review and categorize">
+    Pesa loads the imported transactions and shows them for review. Each transaction is categorized automatically where possible; uncategorized items are flagged for your attention. Assign an account to any uncategorized transaction before pushing them to your books.
   </Step>
-  <Step title="Complete the import">
-    Click **Import**. Pesa loads all transactions from the file into the bank statement record, ready for reconciliation.
+  <Step title="Push to books">
+    Once you are satisfied with the categorization, push the transactions to your journal entries. The import status updates to **Fully Pushed** when all lines have been processed.
   </Step>
 </Steps>
 
 <Note>
-  The supported import formats are **CSV** and **Excel (.xlsx)**. Your file must contain at minimum a date column, a description or narration column, and either a combined amount column or separate debit and credit columns. Contact your bank's support team if you need help exporting a statement in CSV format.
+  Bank statement imports move through the following statuses: **Processing** (the file is being parsed), **Review** (transactions need your attention before being pushed), **Partially Pushed** (some transactions have been pushed to the books), **Fully Pushed** (all transactions are in your books), and **Voided** (the import has been cancelled). Voiding an import does not reverse transactions that have already been pushed.
 </Note>
 
 ## Running Reconciliation
 
-Once your statement is imported, reconcile it against your Pesa records.
+Once your statement transactions are in your books, reconcile the bank account to confirm everything matches.
 
 <Steps>
   <Step title="Open Reconciliation">
     Navigate to **Accounting > Reconciliation**.
   </Step>
-  <Step title="Select account and period">
-    Choose the **bank account** and set the **statement period** (start and end date) that matches your imported statement.
+  <Step title="Start a new session">
+    Click **New Session** and select the **bank account** and **statement period** (start and end date) you want to reconcile.
   </Step>
   <Step title="Review unmatched transactions">
-    Pesa displays all bank statement lines alongside your recorded entries. Lines that have not yet been matched are highlighted. The running difference between your statement balance and your book balance is shown at the top.
+    Pesa displays all bank statement lines alongside your recorded journal entries. Lines that have not yet been matched are highlighted. The running difference between your statement balance and your book balance is shown as you work.
   </Step>
   <Step title="Match transactions">
     For each bank statement line, either:
     - **Select a matching recorded entry** — click the line and choose the corresponding journal entry or receipt from the suggested matches.
-    - **Create a new entry** — if no matching entry exists in Pesa, click **Create Entry** to record it on the spot (useful for bank charges or interest credits).
+    - **Create a new entry** — if no matching entry exists in Pesa, post it on the spot (useful for bank charges or interest credits).
   </Step>
   <Step title="Complete the reconciliation">
-    Once all lines are matched and the difference reads **0.00**, click **Complete Reconciliation**. Pesa locks the reconciliation and records its completion date.
+    Once all lines are matched and the difference reads **0.00**, click **Complete Reconciliation**. Pesa locks the session and records its completion date.
   </Step>
 </Steps>
 
@@ -66,8 +66,8 @@ Not every bank line will have an obvious match. When you encounter an unmatched 
 | Situation | Action |
 |---|---|
 | Transaction exists in Pesa under a slightly different date or amount | Find and select it manually from the match list |
-| Unrecorded bank charge or fee | Click **Create Entry** and post a new expense journal entry for the charge |
-| Unrecorded income (e.g., bank interest) | Click **Create Entry** and post a new income journal entry |
+| Unrecorded bank charge or fee | Create a new expense journal entry for the charge |
+| Unrecorded income (e.g., bank interest) | Create a new income journal entry |
 | Duplicate entry in your books | Void the duplicate entry in Pesa, then match the remaining entry to the bank line |
 
 <Tip>
@@ -76,12 +76,12 @@ Not every bank line will have an obvious match. When you encounter an unmatched 
 
 ## Reconciliation History
 
-View all past reconciliations by navigating to **Accounting > Reconciliation** and selecting the **History** tab. Each completed reconciliation shows:
+View all past reconciliation sessions by navigating to **Accounting > Reconciliation**. Each session shows:
 
 - The bank account name
 - The statement period covered
 - The opening and closing balances
-- The reconciled-by user and completion date
+- The number of matched and unmatched transactions
 - Status: **Open**, **In Progress**, **Completed**, or **Voided**
 
-Click any historical reconciliation to review the matched transactions. If you need to undo a completed reconciliation (for example, to correct a mismatched entry), select it and click **Void** — this reopens the period for corrections.
+Click any session to open its workspace and review the matched transactions. If you need to undo a completed reconciliation (for example, to correct a mismatched entry), select it and choose **Void** — this cancels the session so you can re-open the period for corrections.

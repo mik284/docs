@@ -1,5 +1,5 @@
 ---
-title: "User Roles and Permissions in BasePoint POS"
+title: "Roles and Permissions in BasePoint POS: Full Guide"
 sidebarTitle: "Roles & Permissions"
 description: "Control what each staff member can see and do in BasePoint POS using built-in roles or custom roles with granular permission assignments."
 ---
@@ -44,7 +44,7 @@ Custom roles are created and managed under **Settings → Staff & Users → Role
     - **Orders** — view, update, delete, view dashboard and sales charts
     - **Products** — view, create, update, delete
     - **Inventory** — view, add, edit, delete, import, view low-stock alerts
-    - **Reports** — item sales, purchase summary, VAT summary, category sales, and more
+    - **Reports** — item sales, payment methods summary, VAT summary
     - **Accounting** — chart of accounts, journal entries, invoices, bank statements, reconciliation, financial reports
     - **CRM** — leads, activities, campaigns, targets, budgets, workflows
     - **HR** — leave management, attendance, shifts, schedules
@@ -79,11 +79,16 @@ Permissions in BasePoint POS are organized into module scopes. The table below l
 | **Purchase Orders** | View, create, update, delete POs; update status; create deliveries; view pending items |
 | **Delivery** | View, create, update deliveries; view by date range; print delivery notes |
 | **Transfers** | View, create, approve, complete, reject, cancel stock transfers between locations |
-| **Reports** | Item sales, purchase summary, VAT summary, category sales, customer sales, shift reports |
-| **Payment Methods** | View, create, update, delete payment methods and payment details |
+| **Customers** | View, create, update customer records; log visits |
 | **Gift Cards** | View, create, update gift cards; look up by code; send via email |
 | **Recipes** | View, create, update, delete recipes (for kitchen cost management) |
 | **Modifiers & Addons** | View, create, update, delete modifiers and addons |
+| **Payment Methods** | View, create, update, delete payment methods and payment details |
+| **Shifts** | View, create, update shift definitions |
+| **Schedules** | View, create, update staff schedules |
+| **Units of Measure** | View, create, update, delete units of measure |
+| **Reports** | Item sales, payment methods summary, VAT summary |
+| **Email Reports** | Send sales, purchase, delivery, inventory, and financial report emails |
 
 ### Accounting Scope (Pesa)
 
@@ -92,7 +97,8 @@ Permissions in BasePoint POS are organized into module scopes. The table below l
 | **Chart of Accounts** | View, create, update accounts; view by type; update opening balances |
 | **Journal Entries** | View, create manual/expense journals; post entries; view by source |
 | **Invoices & Bills** | View, create, update invoices; record payments; convert quotes |
-| **Credit & Debit Notes** | View, create, update, approve notes |
+| **Income & Expenses** | Post direct income and expenses; settle invoice payments; view payment history |
+| **Credit & Debit Notes** | View, create, update, approve, apply, and void notes |
 | **Bank Statements** | Import, categorize, exclude, and reconcile bank statement lines |
 | **Reconciliation** | Open, import lines, match/unmatch, auto-match, complete reconciliation sessions |
 | **Financial Reports** | Trial balance, profit & loss, balance sheet, general ledger, cash flow, VAT, AR/AP ageing, customer and supplier statements |
@@ -103,8 +109,8 @@ Permissions in BasePoint POS are organized into module scopes. The table below l
 |---|---|
 | **Leads** | View, create, update leads; update stage; convert leads; view pipeline |
 | **Lead Activities** | View, create, update activities; view activity summaries |
-| **Lead Workflows** | View, create, update, delete workflow rules |
-| **Campaigns** | View, create, update, delete campaigns |
+| **Lead Workflows** | View, create, update, delete, activate/deactivate, and trigger workflow rules |
+| **Campaigns** | View, create, update, delete campaigns; update actuals |
 | **Sales Targets** | View, create, update targets; update actuals; view leaderboard |
 | **Sales Budgets** | View, create, update budgets; approve budgets; update actuals |
 
